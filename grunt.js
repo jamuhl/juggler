@@ -6,12 +6,21 @@ module.exports = function(grunt) {
 
   // var version = '1.0.0';
 
+  var phonegapLib = '/Development/phonegap_2.2.0/lib';
 
-  // grunt.loadNpmTasks('grunt-contrib');
+
+  grunt.loadNpmTasks('grunt-contrib');
+  grunt.loadNpmTasks('grunt-shell');
   // grunt.loadNpmTasks('grunt-rigger');
   grunt.loadTasks("tasks");
 
   grunt.initConfig({
+
+    meta: {
+      location: __dirname,
+      reverseDomain: 'com.example',
+      projectName: 'boilerplate'
+    },
 
     // meta: {
     //   version: version,
@@ -28,6 +37,27 @@ module.exports = function(grunt) {
     //     extension: '.html'
     //   }
     // },
+    shell: {
+      createIOS: {
+        command: './ios/bin/create <%= meta.location %>/ios/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
+        stdout: true,
+        execOptions: {
+            cwd: phonegapLib
+        }
+      },
+      createAndroid: {
+        command: './android/bin/create <%= meta.location %>/android/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
+        stdout: true,
+        execOptions: {
+            cwd: phonegapLib
+        }
+      }
+    },
+
+    clean: {
+      iOS: [ 'ios/www/*' ],              /* clean iOS webroot */
+      android: ['android/assets/www/*' ]   /* clean android webroot */
+    },
 
     /* phonegap cli bridge - iOS */
     iOS: {
@@ -52,6 +82,35 @@ module.exports = function(grunt) {
       },
       log: {
         bin: 'log'
+      }
+    },
+
+    copy: {
+      /* iOS */
+      releaseToIOS: {
+        options: { basePath: "bin/release" },
+        files: {
+          "iOS/www/": ["bin/release/**/*"]
+        }
+      },
+      specificToIOS: {
+        options: { basePath: "src/specific/iOS" },
+        files: {
+          "iOS/www/": ["src/specific/iOS/**/*"]
+        }
+      },
+      /* Android */
+      releaseToAndroid: {
+        options: { basePath: "bin/release" },
+        files: {
+          "android/assets/www/": ["bin/release/**/*"]
+        }
+      },
+      specificToAndroid: {
+        options: { basePath: "src/specific/Android" },
+        files: {
+          "android/assets/www/": ["src/specific/android/**/*"]
+        }
       }
     }
 
@@ -319,6 +378,15 @@ module.exports = function(grunt) {
     // }
 
   });
+
+  grunt.registerTask('iOS:build', 'clean:iOS copy:releaseToIOS copy:specificToIOS iOS:debug');
+
+
+  grunt.registerTask('android:build', 'clean:android copy:releaseToAndroid copy:specificToAndroid android:debug');
+
+
+
+  grunt.registerTask('build', 'iOS:build android:build');
 
   // // The default task will remove all contents inside the dist/ folder, lint
   // // all your code, precompile all the underscore templates into
