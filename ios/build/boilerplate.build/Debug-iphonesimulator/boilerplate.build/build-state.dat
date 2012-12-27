@@ -1,0 +1,624 @@
+Tboilerplate
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Info.plist boilerplate/boilerplate-Info.plist
+cPhaseScriptExecution "Touch www folder" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Script-304B58A110DAC018002A0835.sh
+cCpResource www cordova/../build/boilerplate.app/www
+cCpResource boilerplate/Resources/icons/icon-72.png cordova/../build/boilerplate.app/icon-72.png
+cCopyPlistFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Cordova.plist boilerplate/Resources/../Cordova.plist
+cCpResource boilerplate/Resources/icons/icon.png cordova/../build/boilerplate.app/icon.png
+cCpResource boilerplate/Resources/icons/icon@2x.png cordova/../build/boilerplate.app/icon@2x.png
+cCpResource boilerplate/Resources/Capture.bundle cordova/../build/boilerplate.app/Capture.bundle
+cCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/en.lproj/Localizable.strings boilerplate/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/es.lproj/Localizable.strings boilerplate/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib
+cCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/de.lproj/Localizable.strings boilerplate/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/se.lproj/Localizable.strings boilerplate/Resources/se.lproj/Localizable.strings
+cCpResource boilerplate/Resources/splash/Default-Landscape@2x~ipad.png cordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png
+cCpResource boilerplate/Resources/splash/Default-Landscape~ipad.png cordova/../build/boilerplate.app/Default-Landscape~ipad.png
+cCpResource boilerplate/Resources/splash/Default-Portrait@2x~ipad.png cordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png
+cCpResource boilerplate/Resources/splash/Default-Portrait~ipad.png cordova/../build/boilerplate.app/Default-Portrait~ipad.png
+cCpResource boilerplate/Resources/splash/Default@2x~iphone.png cordova/../build/boilerplate.app/Default@2x~iphone.png
+cCpResource boilerplate/Resources/splash/Default~iphone.png cordova/../build/boilerplate.app/Default~iphone.png
+cCpResource boilerplate/Resources/splash/Default-568h@2x~iphone.png cordova/../build/boilerplate.app/Default-568h@2x~iphone.png
+cProcessPCH /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.pth boilerplate/boilerplate-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate normal i386
+cGenerateDSYMFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate
+cTouch /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
+c00000000509C11F90000000000000110
+t1352405497
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000506212A500000000001EAFC0
+t1348604581
+s2011072
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c00000000506212A400000000000C0EF0
+t1348604580
+s790256
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c00000000506212A40000000000193640
+t1348604580
+s1652288
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000506212A500000000003D2B80
+t1348604581
+s4008832
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000506212A50000000000215D60
+t1348604581
+s2186592
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000506212A50000000000228FD0
+t1348604581
+s2265040
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c00000000506212A5000000000009C220
+t1348604581
+s639520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c00000000506212A50000000000085620
+t1348604581
+s546336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000506212A600000000003DCEF0
+t1348604582
+s4050672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c00000000506212A800000000002C6C10
+t1348604584
+s2911248
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c00000000506212A800000000000BCB50
+t1348604584
+s772944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000506212A900000000001D57A0
+t1348604585
+s1922976
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c00000000506212A9000000000006CC50
+t1348604585
+s445520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000506212AB0000000000AB3D60
+t1348604587
+s11222368
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m
+c0000000050D6007100000000000015AE
+t1356202097
+s5550
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m
+c0000000050D6007100000000000012F5
+t1356202097
+s4853
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib
+c0000000050D600710000000000001759
+t1356202097
+s5977
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/../Cordova.plist
+c0000000050D600710000000000000A33
+t1356202097
+s2611
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/Capture.bundle
+c0000000050D60071000000000000030E
+t1356202097
+s782
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/de.lproj/Localizable.strings
+c0000000050D600710000000000000485
+t1356202097
+s1157
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/en.lproj/Localizable.strings
+c0000000050D600710000000000000470
+t1356202097
+s1136
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/es.lproj/Localizable.strings
+c0000000050D60071000000000000047D
+t1356202097
+s1149
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/icons/icon-72.png
+c0000000050D600710000000000001350
+t1356202097
+s4944
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/icons/icon.png
+c0000000050D600710000000000000F3E
+t1356202097
+s3902
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/icons/icon@2x.png
+c0000000050D600710000000000001EBD
+t1356202097
+s7869
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/se.lproj/Localizable.strings
+c0000000050D600710000000000000471
+t1356202097
+s1137
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-568h@2x~iphone.png
+c0000000050D600710000000000055EBB
+t1356202097
+s351931
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Landscape@2x~ipad.png
+c0000000050D600710000000000176888
+t1356202097
+s1534088
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Landscape~ipad.png
+c0000000050D6007100000000000674B7
+t1356202097
+s423095
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Portrait@2x~ipad.png
+c0000000050D6007100000000001892C2
+t1356202097
+s1610434
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Portrait~ipad.png
+c0000000050D600710000000000066F23
+t1356202097
+s421667
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default@2x~iphone.png
+c0000000050D600710000000000055981
+t1356202097
+s350593
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default~iphone.png
+c0000000050D600710000000000016EC9
+t1356202097
+s93897
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/boilerplate-Prefix.pch
+c0000000050D6007100000000000003C7
+t1356202097
+s967
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m
+c0000000050D60071000000000000045D
+t1356202097
+s1117
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/boilerplate.LinkFileList
+c0000000050D6210300000000000001C8
+t1356210435
+s456
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Script-304B58A110DAC018002A0835.sh
+c0000000050D621030000000000000027
+t1356210435
+s39
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/libCordova.a
+c0000000050D621030000000000319A30
+t1356210435
+s3250736
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Capture.bundle
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Cordova.plist
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default~iphone.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Info.plist
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/MainViewController.nib
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/PkgInfo
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/icon-72.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/icon.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/icon@2x.png
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/www
+t2
+s0
+
+N/Users/jan/Projects/backbone-phonegap-boilerplate/ios/www
+c0000000050D61C340000000000000176
+t1356209204
+s374
+
+N/var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.pth
+t2
+s0
+
+Nboilerplate/boilerplate-Info.plist
+c0000000050D6007100000000000009C9
+t1356202097
+s2505
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies4fca50835886b641^61c452835886b641^---0#1#0#--18"Check dependencies36"EFE268B9-3090-4A47-ADA8-BBF717BA5BB9-
+
+CCompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s377903236.365236
+e377903236.505116
+r1
+xCompileC
+xbuild/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.o
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m:73:25: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
+o    self.viewController.invokeString = invokeString;
+o                        ^
+o/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here
+o@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");
+o                                                 ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m39b35d845886b641^ed6381845886b641^-785"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m:73:25: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]    self.viewController.invokeString = invokeString;                        ^/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");                                                 ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-377903236#18446744073709551615#0#1(2@28"'invokeString' declared here-377903236#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@108"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^42#49#42#49#1597#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@103"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m0000000000000000^72#24#72#24#2392#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@103"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m0000000000000000^4061"CompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.o boilerplate/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-generated-files.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-own-target-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-all-target-headers.hmap -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-project-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/usr/local/lib/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/UninstalledProducts/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources/i386 -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources -F/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -include /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch -MMD -MT dependencies -MF /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.dia -c /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/AppDelegate.m -o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/AppDelegate.o36"894DBB22-02FD-473E-8342-992B61EC29AB-
+
+CCompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s377903236.365925
+e377903236.492427
+r1
+xCompileC
+xbuild/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.o
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m:125:14: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
+o    if (self.invokeString) {
+o             ^
+o/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here
+o@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");
+o                                                 ^
+o/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m:128:93: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
+o        NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
+o                                                                                            ^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m27da5d845886b641^95297e845886b641^-1262"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m:125:14: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]    if (self.invokeString) {             ^/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");                                                 ^/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m:128:93: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]        NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];                                                                                            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-377903236#18446744073709551615#0#1(2@28"'invokeString' declared here-377903236#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@108"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^42#49#42#49#1597#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@110"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m0000000000000000^124#13#124#13#3606#0#12"Deprecations--2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-377903236#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@110"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m0000000000000000^127#92#127#92#4017#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@110"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m0000000000000000^4103"CompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.o boilerplate/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-generated-files.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-own-target-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-all-target-headers.hmap -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-project-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/usr/local/lib/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/UninstalledProducts/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources/i386 -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources -F/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -include /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch -MMD -MT dependencies -MF /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.dia -c /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.m -o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/MainViewController.o36"DCFFF903-FEE0-4408-BECC-E9E5567AC781-
+
+CCompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s377903236.365192
+e377903236.413120
+r1
+xCompileC
+xbuild/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.o
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m51bd5d845886b641^44db69845886b641^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m0000000000000000^4003"CompileC build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.o boilerplate/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-generated-files.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-own-target-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-all-target-headers.hmap -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-project-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/usr/local/lib/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/UninstalledProducts/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources/i386 -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources -F/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -include /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch -MMD -MT dependencies -MF /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.dia -c /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/main.m -o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/main.o36"C2BC3032-D194-4947-9A3D-4A04E951EBD1-
+
+CCompileXIB /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib
+s377903235.392383
+e377903236.058239
+r1
+xCompileXIB
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compiling /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib819464835886b641^79e90e845886b641^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib0000000000000000^1243"CompileXIB boilerplate/Classes/MainViewController.xib    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/MainViewController.nib /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"B70A2E8E-086E-4F08-8ADE-CF9A77DBEEDF-
+
+CCopyPlistFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Cordova.plist boilerplate/Resources/../Cordova.plist
+s377903235.378097
+e377903235.383832
+r1
+xCopyPlistFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Cordova.plist
+xboilerplate/Resources/../Cordova.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy boilerplate/Resources/../Cordova.plist53ec60835886b641^5f4562835886b641^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/../Cordova.plist0000000000000000^816"CopyPlistFile cordova/../build/boilerplate.app/Cordova.plist boilerplate/Resources/../Cordova.plist    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copyPlist --convert binary1 --outdir /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app -- boilerplate/Resources/../Cordova.plist36"5178CC18-52DF-4D61-A4C6-FABB87329D8B-
+
+CCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/de.lproj/Localizable.strings boilerplate/Resources/de.lproj/Localizable.strings
+s377903235.392444
+e377903235.399319
+r1
+xCopyStringsFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/de.lproj/Localizable.strings
+xboilerplate/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy boilerplate/Resources/de.lproj/Localizable.stringsf79464835886b641^3b3a66835886b641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/de.lproj/Localizable.strings0000000000000000^907"CopyStringsFile cordova/../build/boilerplate.app/de.lproj/Localizable.strings boilerplate/Resources/de.lproj/Localizable.strings    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/de.lproj -- boilerplate/Resources/de.lproj/Localizable.strings36"EA7963BE-8F22-45B1-9544-4A5279F66B22-
+
+CCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/en.lproj/Localizable.strings boilerplate/Resources/en.lproj/Localizable.strings
+s377903235.385475
+e377903235.391205
+r1
+xCopyStringsFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/en.lproj/Localizable.strings
+xboilerplate/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy boilerplate/Resources/en.lproj/Localizable.stringsa3cc62835886b641^882a64835886b641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/en.lproj/Localizable.strings0000000000000000^907"CopyStringsFile cordova/../build/boilerplate.app/en.lproj/Localizable.strings boilerplate/Resources/en.lproj/Localizable.strings    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/en.lproj -- boilerplate/Resources/en.lproj/Localizable.strings36"97C695F0-97AA-4000-AAE2-FD42DF988556-
+
+CCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/es.lproj/Localizable.strings boilerplate/Resources/es.lproj/Localizable.strings
+s377903235.386965
+e377903235.392221
+r1
+xCopyStringsFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/es.lproj/Localizable.strings
+xboilerplate/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy boilerplate/Resources/es.lproj/Localizable.stringsd52563835886b641^736964835886b641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/es.lproj/Localizable.strings0000000000000000^907"CopyStringsFile cordova/../build/boilerplate.app/es.lproj/Localizable.strings boilerplate/Resources/es.lproj/Localizable.strings    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/es.lproj -- boilerplate/Resources/es.lproj/Localizable.strings36"47BDB355-F518-49BF-B80E-7AE43AD22843-
+
+CCopyStringsFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/se.lproj/Localizable.strings boilerplate/Resources/se.lproj/Localizable.strings
+s377903235.400682
+e377903235.404989
+r1
+xCopyStringsFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/se.lproj/Localizable.strings
+xboilerplate/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy boilerplate/Resources/se.lproj/Localizable.stringsb7b466835886b641^8ead67835886b641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/se.lproj/Localizable.strings0000000000000000^907"CopyStringsFile cordova/../build/boilerplate.app/se.lproj/Localizable.strings boilerplate/Resources/se.lproj/Localizable.strings    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/se.lproj -- boilerplate/Resources/se.lproj/Localizable.strings36"DD1C8BD0-1921-40C6-969B-7AF4E2AD860D-
+
+CCpResource boilerplate/Resources/Capture.bundle cordova/../build/boilerplate.app/Capture.bundle
+s377903235.385005
+e377903235.489986
+r1
+xCpResource
+xboilerplate/Resources/Capture.bundle
+xcordova/../build/boilerplate.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Copy cordova/../build/boilerplate.app/Capture.bundle57af62835886b641^09717d835886b641^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Capture.bundle000000000080d041^924"CpResource boilerplate/Resources/Capture.bundle cordova/../build/boilerplate.app/Capture.bundle    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/Capture.bundle /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"A8A678E7-07B1-4E47-8AB8-5E0ADA27A238-
+
+CCpResource boilerplate/Resources/icons/icon-72.png cordova/../build/boilerplate.app/icon-72.png
+s377903235.378090
+e377903235.381937
+r1
+xCpResource
+xboilerplate/Resources/icons/icon-72.png
+xcordova/../build/boilerplate.app/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy cordova/../build/boilerplate.app/icon-72.pngcde760835886b641^e3c661835886b641^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/icon-72.png000000000080d041^927"CpResource boilerplate/Resources/icons/icon-72.png cordova/../build/boilerplate.app/icon-72.png    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/icons/icon-72.png /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"6221F7EB-57AF-4C1F-9A04-73239A3B8CF0-
+
+CCpResource boilerplate/Resources/icons/icon.png cordova/../build/boilerplate.app/icon.png
+s377903235.378303
+e377903235.384619
+r1
+xCpResource
+xboilerplate/Resources/icons/icon.png
+xcordova/../build/boilerplate.app/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy cordova/../build/boilerplate.app/icon.pngcbf360835886b641^4b7862835886b641^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/icon.png000000000080d041^918"CpResource boilerplate/Resources/icons/icon.png cordova/../build/boilerplate.app/icon.png    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/icons/icon.png /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"032C34FF-5BF9-4E11-B00A-8E54DD939C07-
+
+CCpResource boilerplate/Resources/icons/icon@2x.png cordova/../build/boilerplate.app/icon@2x.png
+s377903235.383180
+e377903235.385822
+r1
+xCpResource
+xboilerplate/Resources/icons/icon@2x.png
+xcordova/../build/boilerplate.app/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy cordova/../build/boilerplate.app/icon@2x.png113862835886b641^b0c562835886b641^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/icon@2x.png000000000080d041^933"CpResource "boilerplate/Resources/icons/icon@2x.png" "cordova/../build/boilerplate.app/icon@2x.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/icons/icon@2x.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"5A80C1FE-2EB5-4A04-9A05-9D898CCDC2E9-
+
+CCpResource boilerplate/Resources/splash/Default-568h@2x~iphone.png cordova/../build/boilerplate.app/Default-568h@2x~iphone.png
+s377903235.532193
+e377903235.542077
+r1
+xCpResource
+xboilerplate/Resources/splash/Default-568h@2x~iphone.png
+xcordova/../build/boilerplate.app/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy cordova/../build/boilerplate.app/Default-568h@2x~iphone.pngc95988835886b641^37c68a835886b641^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-568h@2x~iphone.png000000000080d041^980"CpResource "boilerplate/Resources/splash/Default-568h@2x~iphone.png" "cordova/../build/boilerplate.app/Default-568h@2x~iphone.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-568h@2x~iphone.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"532A0CB0-7C86-4C4E-9BBE-55CF26EA0DAE-
+
+CCpResource boilerplate/Resources/splash/Default-Landscape@2x~ipad.png cordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png
+s377903235.406328
+e377903235.460705
+r1
+xCpResource
+xboilerplate/Resources/splash/Default-Landscape@2x~ipad.png
+xcordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy cordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png522768835886b641^17f175835886b641^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png000000000080d041^989"CpResource "boilerplate/Resources/splash/Default-Landscape@2x~ipad.png" "cordova/../build/boilerplate.app/Default-Landscape@2x~ipad.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Landscape@2x~ipad.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"00519E68-391B-48B9-AD05-9415DC7655FE-
+
+CCpResource boilerplate/Resources/splash/Default-Landscape~ipad.png cordova/../build/boilerplate.app/Default-Landscape~ipad.png
+s377903235.462054
+e377903235.480865
+r1
+xCpResource
+xboilerplate/Resources/splash/Default-Landscape~ipad.png
+xcordova/../build/boilerplate.app/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy cordova/../build/boilerplate.app/Default-Landscape~ipad.pngcc6276835886b641^321c7b835886b641^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Landscape~ipad.png000000000080d041^980"CpResource "boilerplate/Resources/splash/Default-Landscape~ipad.png" "cordova/../build/boilerplate.app/Default-Landscape~ipad.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Landscape~ipad.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"BAD3452D-E565-4635-91AE-9F86505AC7A1-
+
+CCpResource boilerplate/Resources/splash/Default-Portrait@2x~ipad.png cordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png
+s377903235.482162
+e377903235.530954
+r1
+xCpResource
+xboilerplate/Resources/splash/Default-Portrait@2x~ipad.png
+xcordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy cordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png2b867b835886b641^fef087835886b641^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png000000000080d041^986"CpResource "boilerplate/Resources/splash/Default-Portrait@2x~ipad.png" "cordova/../build/boilerplate.app/Default-Portrait@2x~ipad.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Portrait@2x~ipad.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"EC6803DB-062A-457E-83A9-09F2D03F30A5-
+
+CCpResource boilerplate/Resources/splash/Default-Portrait~ipad.png cordova/../build/boilerplate.app/Default-Portrait~ipad.png
+s377903235.491306
+e377903235.509359
+r1
+xCpResource
+xboilerplate/Resources/splash/Default-Portrait~ipad.png
+xcordova/../build/boilerplate.app/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy cordova/../build/boilerplate.app/Default-Portrait~ipad.png40dc7d835886b641^2b6882835886b641^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default-Portrait~ipad.png000000000080d041^977"CpResource "boilerplate/Resources/splash/Default-Portrait~ipad.png" "cordova/../build/boilerplate.app/Default-Portrait~ipad.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default-Portrait~ipad.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"335F7027-F3BA-4733-B2FB-9A33D09DF66D-
+
+CCpResource boilerplate/Resources/splash/Default@2x~iphone.png cordova/../build/boilerplate.app/Default@2x~iphone.png
+s377903235.510674
+e377903235.527480
+r1
+xCpResource
+xboilerplate/Resources/splash/Default@2x~iphone.png
+xcordova/../build/boilerplate.app/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy cordova/../build/boilerplate.app/Default@2x~iphone.pngf4dc82835886b641^4e0a87835886b641^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default@2x~iphone.png000000000080d041^965"CpResource "boilerplate/Resources/splash/Default@2x~iphone.png" "cordova/../build/boilerplate.app/Default@2x~iphone.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default@2x~iphone.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"8A8BEBA4-B38E-4BD5-915F-B68DAD394872-
+
+CCpResource boilerplate/Resources/splash/Default~iphone.png cordova/../build/boilerplate.app/Default~iphone.png
+s377903235.528850
+e377903235.533849
+r1
+xCpResource
+xboilerplate/Resources/splash/Default~iphone.png
+xcordova/../build/boilerplate.app/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy cordova/../build/boilerplate.app/Default~iphone.png397b87835886b641^c5ab88835886b641^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Default~iphone.png000000000080d041^956"CpResource "boilerplate/Resources/splash/Default~iphone.png" "cordova/../build/boilerplate.app/Default~iphone.png"    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/Resources/splash/Default~iphone.png" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"2295CC02-C5AF-4CFA-ABDA-228FEDA04A3A-
+
+CCpResource www cordova/../build/boilerplate.app/www
+s377903235.378079
+e377903235.554997
+r1
+xCpResource
+xwww
+xcordova/../build/boilerplate.app/www
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy cordova/../build/boilerplate.app/www21e460835886b641^f0148e835886b641^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/www000000000080d041^847"CpResource www cordova/../build/boilerplate.app/www    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jan/Projects/backbone-phonegap-boilerplate/ios/www /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"25C04158-FE74-49A7-A61B-1C0B8DDDEFC7-
+
+CGenerateDSYMFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate
+s377903236.785965
+e377903236.912713
+r1
+xGenerateDSYMFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Generating /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM7c62c9845886b641^d2a7e9845886b641^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM000000000080d041^932"GenerateDSYMFile cordova/../build/boilerplate.app.dSYM cordova/../build/boilerplate.app/boilerplate    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate -o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app.dSYM36"A907C0C5-01D8-4D9B-A519-B3BBE103883B-
+
+CLd /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate normal i386
+s377903236.512158
+e377903236.778737
+r1
+xLd
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Link /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplatec74b83845886b641^e65bc7845886b641^---0#0#0#--1972"Ld cordova/../build/boilerplate.app/boilerplate normal i386    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -F/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -filelist /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/boilerplate.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=4.3 /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/boilerplate36"D12FA3AE-228A-43BF-A5F4-D2EE6779CA6A-
+
+CPhaseScriptExecution "Touch www folder" /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Script-304B58A110DAC018002A0835.sh
+s377903235.348632
+e377903235.369868
+r1
+xPhaseScriptExecution
+xTouch www folder
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Script-304B58A110DAC018002A0835.sh
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Run custom shell script 'Touch www folder'fa255a835886b641^47af5e835886b641^---0#0#0#--21101"PhaseScriptExecution "Touch www folder" build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Script-304B58A110DAC018002A0835.sh    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER jan    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build    setenv BUILD_ROOT /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build    setenv CACHE_ROOT /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_OBJCPP_ARC_ABI YES    setenv CLASS_FILE_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build    setenv CONFIGURATION_TEMP_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH boilerplate.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH boilerplate.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/boilerplate.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME boilerplate.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH boilerplate.app/Executables    setenv EXECUTABLE_FOLDER_PATH boilerplate.app    setenv EXECUTABLE_NAME boilerplate    setenv EXECUTABLE_PATH boilerplate.app/boilerplate    setenv FILE_LIST /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH boilerplate.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME boilerplate.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER boilerplate/boilerplate-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include\" \"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/usr/local/lib/include\" \"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/UninstalledProducts/include\" \"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE boilerplate/boilerplate-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH boilerplate.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH boilerplate.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/boilerplate.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER jan    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/boilerplate.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH boilerplate.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal/i386/boilerplate.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH boilerplate.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12C60    setenv MAC_OS_X_VERSION_ACTUAL 1082    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0802    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Objects-normal    setenv OBJROOT /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH boilerplate.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/PkgInfo    setenv PKGINFO_PATH boilerplate.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10A403    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60000    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH boilerplate.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH boilerplate.app/PrivateHeaders    setenv PRODUCT_NAME boilerplate    setenv PRODUCT_SETTINGS_PATH /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/boilerplate-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT boilerplate    setenv PROJECT_DERIVED_FILE_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/DerivedSources    setenv PROJECT_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PROJECT_FILE_PATH /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate.xcodeproj    setenv PROJECT_NAME boilerplate    setenv PROJECT_TEMP_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build    setenv PUBLIC_HEADERS_FOLDER_PATH boilerplate.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH boilerplate.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_NAME iphonesimulator6.0    setenv SDK_PRODUCT_BUILD_VERSION 10A403    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH boilerplate.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH boilerplate.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv SRCROOT /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME boilerplate    setenv TARGET_BUILD_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build    setenv TARGET_NAME boilerplate    setenv TARGET_TEMP_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build    setenv TEMP_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build    setenv TEMP_FILES_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build    setenv TEMP_FILE_DIR /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build    setenv TEMP_ROOT /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH boilerplate.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER jan    setenv USER_APPS_DIR /Users/jan/Applications    setenv USER_LIBRARY_DIR /Users/jan/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH boilerplate.app/version.plist    setenv VERSION_INFO_BUILDER jan    setenv VERSION_INFO_FILE boilerplate_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:boilerplate  PROJECT:boilerplate-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME boilerplate.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4G2008a    setenv XCODE_VERSION_ACTUAL 0452    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0450    setenv YACC yacc    /bin/sh -c /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/Script-304B58A110DAC018002A0835.sh36"E036374B-2A9B-4158-BB6B-A4B7ACE309FC-
+
+CProcessInfoPlistFile /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Info.plist boilerplate/boilerplate-Info.plist
+s377903235.336896
+e377903235.340253
+r1
+xProcessInfoPlistFile
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Info.plist
+xboilerplate/boilerplate-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Process boilerplate/boilerplate-Info.plist005756835886b641^df1b57835886b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/boilerplate-Info.plist0000000000000000^972"ProcessInfoPlistFile cordova/../build/boilerplate.app/Info.plist boilerplate/boilerplate-Info.plist    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    builtin-infoPlistUtility boilerplate/boilerplate-Info.plist -genpkginfo /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app/Info.plist36"BAD8ED48-080A-4908-AA1B-3BFB2077CDFE-
+
+CProcessPCH /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.pth boilerplate/boilerplate-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s377903236.067220
+e377903236.353562
+r1
+xProcessPCH
+x/var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.pth
+xboilerplate/boilerplate-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Precompile boilerplate/boilerplate-Prefix.pch4d6911845886b641^25945a845886b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/boilerplate-Prefix.pch0000000000000000^4016"ProcessPCH /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.pth boilerplate/boilerplate-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-generated-files.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-own-target-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-all-target-headers.hmap -iquote /Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/boilerplate-project-headers.hmap -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/usr/local/lib/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/UninstalledProducts/include -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources/i386 -I/Users/jan/Projects/backbone-phonegap-boilerplate/ios/build/boilerplate.build/Debug-iphonesimulator/boilerplate.build/DerivedSources -F/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build --serialize-diagnostics /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.dia -c /Users/jan/Projects/backbone-phonegap-boilerplate/ios/boilerplate/boilerplate-Prefix.pch -o /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/9p/krps8rns0j91d53lfth8fy680000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/boilerplate-Prefix-fgdbbetlohlaabgcgxkullnefxog/boilerplate-Prefix.pch.d36"5E100740-744C-4B16-920A-C87E987D3433-
+
+CTouch /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app
+s377903236.921104
+e377903236.927534
+r1
+xTouch
+x/Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Touch /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.appebe1eb845886b641^7573ed845886b641^---0#0#0#--686"Touch cordova/../build/boilerplate.app    cd /Users/jan/Projects/backbone-phonegap-boilerplate/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools:/Development/adt-bundle-macosx/sdk/platform-tools:/Development/adt-bundle-macosx/sdk/tools"    /usr/bin/touch -c /Users/jan/Projects/backbone-phonegap-boilerplate/ios/cordova/../build/boilerplate.app36"5DF07F45-9C4E-4BA5-9F3D-07660207AEC1-
+

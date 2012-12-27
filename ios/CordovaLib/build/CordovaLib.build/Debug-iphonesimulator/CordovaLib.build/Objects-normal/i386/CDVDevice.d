@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVDevice.m \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDV.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVAvailability.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVPlugin.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVPluginResult.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVCommandDelegate.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVViewController.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVCordovaView.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/JSON/JSONKit.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVWhitelist.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVURLProtocol.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVAccelerometer.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVBattery.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVCamera.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVCapture.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVFile.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVConnection.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVReachability.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVContact.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVContacts.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVDebug.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVDebugConsole.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVDevice.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVFileTransfer.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVLocation.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVNotification.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVSound.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVSplashScreen.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/CDVLocalStorage.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/NSArray+Comparisons.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/NSData+Base64.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/NSDictionary+Extensions.h \
+  /Users/jan/Projects/backbone-phonegap-boilerplate/ios/CordovaLib/Classes/UIDevice+Extensions.h
