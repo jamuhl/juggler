@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 
 
   grunt.loadNpmTasks('grunt-contrib');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-shell');
   // grunt.loadNpmTasks('grunt-rigger');
   grunt.loadTasks("tasks");
@@ -55,7 +56,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      iOS: [ 'ios/www/*' ],              /* clean iOS webroot */
+      boiler: ['boiler/**/*'],
+      iOS: ['ios/www/*'],              /* clean iOS webroot */
       android: ['android/assets/www/*' ]   /* clean android webroot */
     },
 
@@ -86,17 +88,39 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      /* common client */
+      boilClient: {
+        options: { basePath: "src/client" },
+        files: {
+          "boiler/src/": ["src/client/**/*"]
+        }
+      },
+      boilIOS: {
+        options: { basePath: "src/iOS" },
+        files: {
+          "boiler/src/": ["src/iOS/**/*"]
+        }
+      },
+      toDist: {
+        options: { basePath: "boiler/src"},
+        files: {
+          "boiler/dist/": [
+            "boiler/src/assets/font/**/*",
+            "boiler/src/assets/img/**/*",
+            "boiler/src/assets/js/libs/cordova-2.2.0.js"
+        ]}
+      },
       /* iOS */
       releaseToIOS: {
         options: { basePath: "bin/release" },
         files: {
-          "iOS/www/": ["bin/release/**/*"]
+          "ios/www/": ["bin/release/**/*"]
         }
       },
       specificToIOS: {
         options: { basePath: "src/specific/iOS" },
         files: {
-          "iOS/www/": ["src/specific/iOS/**/*"]
+          "ios/www/": ["src/specific/iOS/**/*"]
         }
       },
       /* Android */
@@ -112,7 +136,7 @@ module.exports = function(grunt) {
           "android/assets/www/": ["src/specific/android/**/*"]
         }
       }
-    }
+    },
 
     // rig: {
     //   lebdoCSS: {
@@ -196,6 +220,50 @@ module.exports = function(grunt) {
     // //
     // // The concat task depends on this file to exist, so if you decide to
     // // remove this, ensure concat is updated accordingly.
+
+    jade: {
+      compile: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
+        files: {
+          "boiler/src/assets/templates/*": ["boiler/src/app/modules/**/*.jade"]
+        }
+      }
+    },
+    stylus: {
+      compile: {
+        options: {
+          // paths: ['path/to/import', 'another/to/import'],
+          // urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
+          // use: [
+          //   require('fluidity') // use stylus plugin at compile time
+          // ]
+        },
+        files: {
+          "boiler/src/assets/css/main.css": [
+            "boiler/src/stylus/main.styl"//"client/stylus/**/*.styl"
+          ]}
+      }
+    },
+    handlebars: {
+      compile: {
+        options: {
+          processName: function(filename) {
+            var pieces = filename.split("/");
+            return pieces[pieces.length - 1].replace('.html', '');
+          }
+          //namespace: "JST"
+        },
+        files: {
+          "boiler/gen/templates.js": [
+            "boiler/src/assets/templates/*.html"
+          ]
+        }
+      }
+    },
 
     // // jst: {
     // //   "dist/debug/templates.js": [
@@ -331,24 +399,39 @@ module.exports = function(grunt) {
 
     // // This task uses James Burke's excellent r.js AMD build tool.  In the
     // // future other builders may be contributed as drop-in alternatives.
-    // requirejs: {
-    //   // Include the main configuration file
-    //   mainConfigFile: "client/app/config.js",
+    requirejs: {
+      compile: {
+        options: {
+          //baseUrl: "path/to/base",
+          mainConfigFile: "boiler/src/app/config.js",
+          out: "boiler/gen/require.js",
+          name: "config",
+          wrap: false
+        }
+      }
+    },
 
-    //   // Output file
-    //   out: "client/dist/debug/require.js",
+    concat: {
+      "boiler/dist/assets/js/require.js": [
+        "boiler/src/assets/js/libs/almond.js",
+        "boiler/gen/templates.js",
+        "boiler/gen/require.js"
+      ]
+    },
 
-    //   excludeShallow: [
-    //       "admin/adminViews"
-    //     //, "modules/common/personProfile"
-    //   ],
-
-    //   // Root application module
-    //   name: "config",
-
-    //   // Do not wrap everything in an IIFE
-    //   wrap: false
-    // },
+    mincss: {
+      compress: {
+        files: {
+          "boiler/dist/assets/css/index.css": [
+            "boiler/src/assets/css/bootstrap-2.0.2.css",
+            "boiler/src/assets/css/bootstrap-responsive-2.0.2.css",
+            "boiler/src/assets/css/font-awesome-2.0.css",
+            "boiler/src/assets/css/chosen-0.9.8.css",
+            "boiler/src/assets/css/main.css"
+          ]
+        }
+      }
+    }
 
     // copy: {
     //   js: {
@@ -378,6 +461,8 @@ module.exports = function(grunt) {
     // }
 
   });
+
+  grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade handlebars requirejs concat mincss copy:toDist');
 
   grunt.registerTask('iOS:build', 'clean:iOS copy:releaseToIOS copy:specificToIOS iOS:debug');
 

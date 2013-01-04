@@ -1,0 +1,83 @@
+/*!
+ *  main css
+ */
+.main-inner {
+  min-height: 500px;
+}
+.tableheader {
+  margin-bottom: 15px;
+}
+.commands button,
+.commands .badge {
+  margin-left: 3px;
+}
+.resources .resource {
+  border-bottom: solid 1px #ccc;
+  border-left: solid 3px #468847;
+  margin: 0 0 25px;
+  padding: 5px 0;
+}
+.resources .resource.isFallback {
+  border-left: solid 3px #7aba7b;
+}
+.resources .resource.isFallback .badge-warning {
+  background: #7aba7b;
+}
+.resources .resource.isFallback.toFallback {
+  border-left: solid 3px #db0000;
+}
+.resources .resource .key {
+  color: #468847;
+  padding: 0 5px;
+}
+.resources .resource .key.isFallback {
+  color: #58a959;
+}
+.resources .resource .key.isFallback.toFallback {
+  color: #db0000;
+}
+.resources .resource textarea:disabled,
+.resources .resource input:disabled {
+  cursor: pointer;
+}
+.resources .resource .translated {
+  margin-top: 30px;
+}
+.footer {
+  margin-top: 0;
+  border-top: 1px solid #292929;
+}
+.footer-inner {
+  padding: 15px 0;
+  font-size: 12px;
+  background: #111;
+  color: #999;
+  text-align: right;
+}
+.footer a {
+  color: #999;
+}
+.footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+@media (min-width: 980px) {
+  body {
+    margin-top: 60px;
+  }
+}
+@media print {
+  .header,
+  .subheader,
+  .footer,
+  .extra {
+    display: none;
+  }
+  .commands {
+    display: none;
+  }
+  .content-container {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
