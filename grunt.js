@@ -70,66 +70,69 @@ module.exports = function(grunt) {
       },
       log: {
         bin: 'log'
+      },
+      clean: {
+        bin: 'clean'
+      },
+      BOOM: {
+        bin: 'BOOM'
       }
     },
 
     copy: {
       /* common client */
       boilClient: {
-        options: { basePath: "src/client" },
+        options: { basePath: "www/client" },
         files: {
-          "boiler/src/": ["src/client/**/*"]
+          "boiler/src/": ["www/client/**/*"]
         }
       },
       /* specific iOS */
       boilIOS: {
-        options: { basePath: "src/iOS" },
+        options: { basePath: "www/iOS" },
         files: {
-          "boiler/src/": ["src/iOS/**/*"]
+          "boiler/src/": ["www/iOS/**/*"]
+        }
+      },
+      /* specific Android */
+      boilAndroid: {
+        options: { basePath: "www/android" },
+        files: {
+          "boiler/src/": ["www/android/**/*"]
         }
       },
 
       /* copy assets to dist */
-      toDist: {
+      srcToDist: {
         options: { basePath: "boiler/src"},
         files: {
           "boiler/dist/": [
-            "boiler/src/assets/font/**/*",
             "boiler/src/assets/img/**/*",
             "boiler/src/assets/js/libs/cordova-2.2.0.js"
         ]}
       },
+      genToDist: {
+        options: { basePath: "boiler/gen"},
+        files: {
+          "boiler/dist/": [
+            "boiler/gen/index.html"
+        ]}
+      },
 
-      /* releaseiOS */
-      releaseToIOS: {
+      /* release iOS */
+      distToIOS: {
         options: { basePath: "boiler/dist" },
         files: {
           "ios/www/": ["boiler/dist/**/*"]
         }
+      },
+      /* release Android*/
+      distToAndroid: {
+        options: { basePath: "boiler/dist" },
+        files: {
+          "android/assets/www/": ["boiler/dist/**/*"]
+        }
       }
-
-
-
-
-      // specificToIOS: {
-      //   options: { basePath: "src/specific/iOS" },
-      //   files: {
-      //     "ios/www/": ["src/specific/iOS/**/*"]
-      //   }
-      // },
-      // /* Android */
-      // releaseToAndroid: {
-      //   options: { basePath: "bin/release" },
-      //   files: {
-      //     "android/assets/www/": ["bin/release/**/*"]
-      //   }
-      // },
-      // specificToAndroid: {
-      //   options: { basePath: "src/specific/Android" },
-      //   files: {
-      //     "android/assets/www/": ["src/specific/android/**/*"]
-      //   }
-      // }
     },
 
     /* build the webproject 
@@ -139,13 +142,29 @@ module.exports = function(grunt) {
     */
     jade: {
       compile: {
+        options: { },
+        files: {
+          "boiler/src/assets/templates/*.html": ["boiler/src/app/modules/**/*.jade"]
+        }
+      },
+      debugIndex: {
         options: {
           data: {
-            debug: false
+            options: { debug: true }
           }
         },
         files: {
-          "boiler/src/assets/templates/*": ["boiler/src/app/modules/**/*.jade"]
+          "boiler/src/index.html": ["boiler/src/index.jade"]
+        }
+      },
+      releaseIndex: {
+        options: {
+          data: {
+            options: { debug: false }
+          }
+        },
+        files: {
+          "boiler/gen/index.html": ["boiler/src/index.jade"]
         }
       }
     },
@@ -196,7 +215,7 @@ module.exports = function(grunt) {
     },
 
     concat: {
-      "boiler/dist/assets/js/require.js": [
+      "boiler/dist/assets/js/app.js": [
         "boiler/src/assets/js/libs/almond.js",
         "boiler/gen/templates.js",
         "boiler/gen/require.js"
@@ -207,89 +226,50 @@ module.exports = function(grunt) {
       compress: {
         files: {
           "boiler/dist/assets/css/index.css": [
-            "boiler/src/assets/css/bootstrap-2.0.2.css",
-            "boiler/src/assets/css/bootstrap-responsive-2.0.2.css",
-            "boiler/src/assets/css/font-awesome-2.0.css",
-            "boiler/src/assets/css/chosen-0.9.8.css",
+            "boiler/src/assets/css/cordova.css",
             "boiler/src/assets/css/main.css"
           ]
         }
       }
+    },
+
+
+    // // Running debug/preview server
+    server: {
+      //root: "boiler/src/",
+      index: "boiler/src/index.html",
+      // files: { "index.html": "boiler/src/index.html" },
+
+      folders: {
+          "assets": "boiler/src/assets",
+          "app": "boiler/src/app"
+      },
+
+      release: {
+        // These two options make it easier for deploying, by using whatever
+        // PORT is available in the environment and defaulting to any IP.
+        host: "0.0.0.0",
+        port: process.env.PORT || 8000,
+
+        index: "boiler/dist/index.html",
+        // files: { "index.html": "boiler/src/index.html" },
+
+        folders: {
+            "assets": "boiler/dist/assets"
+        }
+      }
     }
-
-
-    // // Running the server without specifying an action will run the defaults,
-    // // port: 8080 and host: 127.0.0.1.  If you would like to change these
-    // // defaults, simply add in the properties `port` and `host` respectively.
-    // //
-    // // Changing the defaults might look something like this:
-    // //
-    // // server: {
-    // //   host: "127.0.0.1", port: 9001
-    // //   debug: { ... can set host and port here too ...
-    // //  }
-    // //
-    // //  To learn more about using the server task, please refer to the code
-    // //  until documentation has been written.
-    // server: {
-    //   files: { "favicon.ico": "client/favicon.ico" },
-
-    //   folders: {
-    //       "app/templates": "client/assets/templates"
-    //   },
-
-    //   debug: {
-    //     files: { "favicon.ico": "client/favicon.ico" },
-
-    //     folders: {
-    //       "app": "client/dist/debug",
-    //       "assets/js/libs": "client/dist/debug"
-    //     }
-    //   },
-
-    //   release: {
-    //     // These two options make it easier for deploying, by using whatever
-    //     // PORT is available in the environment and defaulting to any IP.
-    //     host: "0.0.0.0",
-    //     port: process.env.PORT || 8000,
-
-    //     files: { "favicon.ico": "client/favicon.ico" },
-
-    //     folders: {
-    //       "app": "client/dist/release",
-    //       "assets/js/libs": "client/dist/release",
-    //       "assets/css": "client/dist/release"
-    //     }
-    //   }
-    // }
 
   });
 
   grunt.registerTask('iOS:init', 'shell:createIOS');
-  grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade handlebars requirejs concat mincss copy:toDist');
+  grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
+  grunt.registerTask('iOS:build', 'clean:iOS iOS:boil copy:distToIOS iOS:debug');
 
-  // grunt.registerTask('iOS:build', 'clean:iOS copy:releaseToIOS copy:specificToIOS iOS:debug');
-
-
-  // grunt.registerTask('android:build', 'clean:android copy:releaseToAndroid copy:specificToAndroid android:debug');
-
-
-
-  // grunt.registerTask('build', 'iOS:build android:build');
-
-  // // The default task will remove all contents inside the dist/ folder, lint
-  // // all your code, precompile all the underscore templates into
-  // // dist/debug/templates.js, compile all the application code into
-  // // dist/debug/require.js, and then concatenate the require/define shim
-  // // almond.js and dist/debug/templates.js into the require.js file.
-  // grunt.registerTask("default", "clean lint jade stylus");
-
-  // // The debug task is simply an alias to default to remain consistent with
-  // // debug/release.
-  // grunt.registerTask("debug", "default");
-
-  // // The release task will run the debug tasks and then minify the
-  // // dist/debug/require.js file and CSS files.
-  // grunt.registerTask("release", "default handlebars requirejs rig min mincss copy");
+  grunt.registerTask('android:init', 'shell:createAndroid');
+  grunt.registerTask('android:boil', 'clean:boiler copy:boilClient copy:boilAndroid stylus jade handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
+  grunt.registerTask('android:build', 'android:clean clean:android android:boil copy:distToAndroid android:debug');
+ 
+  grunt.registerTask('build', 'iOS:build android:build');
 
 };
