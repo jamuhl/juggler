@@ -1,8 +1,5 @@
 define([
-    // 'augment',
-    // 'twitterbootstrap',
-    // 'jquery_smoothscroll',
-    // 'chosen'
+    'backbone_touch'
 ],
 
 function() { return {}; });

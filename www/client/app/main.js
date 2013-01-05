@@ -27,8 +27,6 @@ function(ns, $, Backbone) {
     // turn on debugging
     app.debug = false;
 
-    app.store = new Backbone.Model();
-
     app.addRegions({
         content: '.content'
     });

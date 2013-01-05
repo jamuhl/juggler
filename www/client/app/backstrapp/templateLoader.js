@@ -15,49 +15,47 @@ function($, _, Handlebars) {
         // build process every time you change a template.
         //
         // Delete if you are using a different template loading method.
-        fetchTemplate: function(path, done) {
-            var JST = window.JST = window.JST || {};
-            var def = new $.Deferred();
+        fetchTemplate: function(path) {
+            var JST = window.JST = window.JST || {}
+              , loadUrl;
+            //var def = new $.Deferred();
 
             // Should be an instant synchronous way of getting the template, if it
             // exists in the JST object.
             if (JST[path]) {
-                var tmpl = Handlebars.template(JST[path]);
-                if (_.isFunction(done)) {
-                    done(tmpl);
-                }
+                return Handlebars.template(JST[path]);
+                // if (_.isFunction(done)) {
+                //     return tmpl;
+                // }
 
-                return def.resolve(tmpl);
+                //return def.resolve(tmpl);
             }
             else {
-                path = 'assets/templates/' + path + '.html';
+                loadUrl = 'assets/templates/' + path + '.html';
             }
 
             // Fetch it asynchronously if not available from JST, ensure that
             // template requests are never cached and prevent global ajax event
             // handlers from firing.
+            var loadedTmpl;
             $.ajax({
-                url: path,
+                url: loadUrl,
                 type: "get",
                 dataType: "text",
                 cache: false,
                 global: false,
+                async: false,
 
                 success: function(contents) {
                     JST[path] = contents;
 
                     // Set the global JST cache and return the template
-                    if (_.isFunction(done)) {
-                        done(JST[path]);
-                    }
-
-                    // Resolve the template deferred
-                    def.resolve(JST[path]);
+                    loadedTmpl = contents;
                 }
           });
 
           // Ensure a normalized return value (Promise)
-          return def.promise();
+          return loadedTmpl;
         }
     };
 });

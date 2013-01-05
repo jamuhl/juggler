@@ -1,7 +1,7 @@
 define([
   'underscore',  
   'backbone',
-  'marionette_async',
+  'marionette',
   'handlebars',
   './templateLoader'
 ],
@@ -169,23 +169,23 @@ function(_, Backbone, Marionette, Handlebars, Loader) {
     ns.renderer = mario.Renderer;
 
 
-    Backbone.Marionette.TemplateCache.prototype.loadTemplate = function(templateId, callback) {
+    Backbone.Marionette.TemplateCache.prototype.loadTemplate = function(templateId) {
         var self = this;
 
-        Loader.fetchTemplate(templateId, function(tmpl) {
-            var ret = (_.isFunction(tmpl)) ? tmpl : Handlebars.compile(tmpl);
-            callback.call(self, ret);
-        });      
+        return Loader.fetchTemplate(templateId);    
     };
 
-    var renderTemplate = function (template, data) {
+    Backbone.Marionette.TemplateCache.prototype.compileTemplate = function(tmpl) {
+        var ret = (_.isFunction(tmpl)) ? tmpl : Handlebars.compile(tmpl);
+        return ret;
+    };
+    
+    ns.renderer.renderTemplate = function (template, data) {
         if (!template) return null;
         var rendering = template(data);
         //if ($.i18n && rendering && rendering.length > 2) $(rendering).i18n();
         return rendering;
     };
-
-    ns.renderer.renderTemplate = renderTemplate;
 
     return ns;
 
