@@ -14,12 +14,13 @@ html(lang="en")
 
 
   body
+    //- .app
     .content
-        .app
-            h1 Apache Cordova
+    
+        h1 Apache Cordova
 
-            #deviceready.blink
-                p.event.listening Connecting to Device
+        #deviceready.blink
+            p.event.listening Connecting to Device
 
     if options.debug
         script(src='assets/js/libs/require.js', data-main='app/config')

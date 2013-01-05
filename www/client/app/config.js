@@ -16,8 +16,8 @@ require.config({
         handlebars: "../assets/js/libs/handlebars-1.0.0.beta.6",
 
         backbone: "../assets/js/libs/backbone-0.9.2",
-        backbone_touch: "../assets/js/libs/backbone.touch-0.2",
-        marionette: "../assets/js/libs/backbone.marionette-0.9.5"
+        //backbone_touch: "../assets/js/libs/backbone.touch-0.2",
+        marionette: "../assets/js/libs/backbone.marionette-1.0.0rc2"
     },
 
     shim: {

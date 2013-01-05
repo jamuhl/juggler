@@ -6,10 +6,11 @@ define([
     './baseModel',
     './baseController',
     './baseRouter',
+    './stackRegion',
     './qs'
 ],
 
-function(_, Backbone, BackstrappMarionette, BaseCollection, BaseModel, BaseController, baseRouter, qs) {
+function(_, Backbone, BackstrappMarionette, BaseCollection, BaseModel, BaseController, baseRouter, stackRegion, qs) {
 
 	// override Backbone sync
 	Backbone.sync = function(method, model, options) {
@@ -39,6 +40,7 @@ function(_, Backbone, BackstrappMarionette, BaseCollection, BaseModel, BaseContr
 	ns.Model = BaseModel;
 	ns.Controller = BaseController;
 	ns.Router = baseRouter;
+    ns.StackRegion = stackRegion;
 	ns.qs = qs;
 
 	return ns;

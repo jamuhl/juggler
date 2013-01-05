@@ -28,7 +28,10 @@ function(ns, $, Backbone) {
     app.debug = false;
 
     app.addRegions({
-        content: '.content'
+        content: {
+            selector: '.content',
+            regionType: ns.StackRegion
+        }
     });
 
     app.addAsyncInitializer(function(options, done) {
@@ -42,6 +45,7 @@ function(ns, $, Backbone) {
     });
 
     app.start(function() {
+        $('.content').html('');
         Backbone.history.start(/*{ pushState: true }*/);  
     });
 
