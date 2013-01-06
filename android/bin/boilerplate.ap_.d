@@ -29,10 +29,10 @@
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/js \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/css/index.css \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/font/fontawesome-webfont.eot \
-/Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/font/fontawesome-webfont.svg \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/font/fontawesome-webfont.ttf \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/font/fontawesome-webfont.woff \
-/Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/img/chosen-sprite.png \
+/Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/font/FontAwesome.otf \
+/Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/img/logo.png \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/js/app.js \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/js/libs \
 /Users/jan/Projects/backbone-phonegap-boilerplate/android/assets/www/assets/js/libs/cordova-2.2.0.js \

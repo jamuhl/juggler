@@ -247,7 +247,7 @@ module.exports = function(grunt) {
           "app": "boiler/src/app"
       },
 
-      release: {
+      dist: {
         // These two options make it easier for deploying, by using whatever
         // PORT is available in the environment and defaulting to any IP.
         host: "0.0.0.0",
