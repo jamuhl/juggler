@@ -17,7 +17,9 @@ require.config({
 
         backbone: "../assets/js/libs/backbone-0.9.2",
         //backbone_touch: "../assets/js/libs/backbone.touch-0.2",
-        marionette: "../assets/js/libs/backbone.marionette-1.0.0rc2"
+        marionette: "../assets/js/libs/backbone.marionette-1.0.0rc2",
+
+        ratchet: "../assets/js/libs/ratchet-1.0.0"
     },
 
     shim: {
@@ -48,6 +50,10 @@ require.config({
         backbone: {
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
+        },
+
+        ratchet: {
+            deps: ['jquery']
         }
     }
 });

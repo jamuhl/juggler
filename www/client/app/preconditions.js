@@ -1,4 +1,5 @@
 define([
+	'ratchet'
     //'backbone_touch'
 ],
 

@@ -26,7 +26,7 @@ function(Backbone, SlideEffect) {
             // Setting default styles
            // view.$el.css({position:'absolute', visibility:'hidden', overflow:'hidden', width:'100%', height:'100%'});
            // view.$el.css({position:'absolute', visibility:'hidden'});
-              view.$el.css({position:'absolute'});
+              view.$el.css({position:'absolute', width: '100%'});
               stackNavigator.$el.append(view.el);
 
 

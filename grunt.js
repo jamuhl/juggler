@@ -108,6 +108,7 @@ module.exports = function(grunt) {
         files: {
           "boiler/dist/": [
             "boiler/src/assets/img/**/*",
+            "boiler/src/assets/font/**/*",
             "boiler/src/assets/js/libs/cordova-2.2.0.js"
         ]}
       },
@@ -226,7 +227,8 @@ module.exports = function(grunt) {
       compress: {
         files: {
           "boiler/dist/assets/css/index.css": [
-            "boiler/src/assets/css/cordova.css",
+            "boiler/src/assets/css/ratchet-1.0.0.css",
+            "boiler/src/assets/css/font-awesome-3.0.css",
             "boiler/src/assets/css/main.css"
           ]
         }
@@ -263,12 +265,14 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('iOS:init', 'shell:createIOS');
-  grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
-  grunt.registerTask('iOS:build', 'clean:iOS iOS:boil copy:distToIOS iOS:debug');
+  grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade');
+  grunt.registerTask('iOS:dist', 'iOS:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
+  grunt.registerTask('iOS:build', 'clean:iOS iOS:dist copy:distToIOS iOS:debug');
 
   grunt.registerTask('android:init', 'shell:createAndroid');
-  grunt.registerTask('android:boil', 'clean:boiler copy:boilClient copy:boilAndroid stylus jade handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
-  grunt.registerTask('android:build', 'android:clean clean:android android:boil copy:distToAndroid android:debug');
+  grunt.registerTask('android:boil', 'clean:boiler copy:boilClient copy:boilAndroid stylus jade');
+  grunt.registerTask('android:dist', 'android:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
+  grunt.registerTask('android:build', 'android:clean clean:android android:dist copy:distToAndroid android:debug');
  
   grunt.registerTask('build', 'iOS:build android:build');
 
