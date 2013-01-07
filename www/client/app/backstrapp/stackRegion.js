@@ -11,18 +11,19 @@ function(_, Backbone, Marionette, StackNavigator) {
 
         initialize: function(options) {
             this.stackNavigator = new StackNavigator({
-                el: this.el
+                el: this.el,
+                css: options.css || {}
             });
         },
 
-        open: function(view) {
+        push: function(view) {
             // this.$el.hide();
             // this.$el.html(view.el);
             // this.$el.slideDown("fast");
             this.stackNavigator.pushView(view);
         },
 
-        back: function() {
+        pop: function() {
             this.stackNavigator.popView();
         }
     });

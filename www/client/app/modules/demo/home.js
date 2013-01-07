@@ -11,12 +11,24 @@ function(ns) {
     var Controller = ns.Controller.extend({
         home: function() {
             var view = new module.Views.Main();
-            app.content.show(view);
+
+            app.push({
+                content: view,
+                title: new ns.modules.bars.Views.Main({
+                    model: new Backbone.Model({ title: 'home' })
+                })
+            });
         },
 
         next: function() {
             var view = new module.Views.Next();
-            app.content.show(view);
+
+            app.push({
+                content: view,
+                title: new ns.modules.bars.Views.Main({
+                    model: new Backbone.Model({ title: 'next' })
+                })
+            });
         }
     });
     module.controller = new Controller();
@@ -34,7 +46,7 @@ function(ns) {
 
     module.Views.Main = ns.ItemView.extend({
         tagName: 'div',
-        template: 'home',
+        template: 'demo/home',
 
         initialize: function(options) {
         },
@@ -52,7 +64,7 @@ function(ns) {
 
     module.Views.Next = ns.ItemView.extend({
         tagName: 'div',
-        template: 'next',
+        template: 'demo/next',
 
         initialize: function(options) {
         },
@@ -65,7 +77,7 @@ function(ns) {
             e.preventDefault();
 
             // module.controller.navigate('home');
-            app.content.back();
+            app.pop();
         }
     });
 });

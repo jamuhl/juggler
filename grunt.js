@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
   // import tasks
   grunt.loadNpmTasks('grunt-contrib');
-  grunt.loadNpmTasks('grunt-contrib-jade'); /* as long default jade won't allow wildcard for target files */
+  //grunt.loadNpmTasks('grunt-contrib-jade'); /* as long default jade won't allow wildcard for target files */
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadTasks("tasks");
 
@@ -191,13 +191,17 @@ module.exports = function(grunt) {
         options: {
           processName: function(filename) {
             var pieces = filename.split("/");
-            return pieces[pieces.length - 1].replace('.html', '');
+            var name = '';
+            for (var i = 4, len = pieces.length; i < len; i++) {
+              name += pieces[i] + '/';
+            }
+            return name.replace('.html/', '');
           }
           //namespace: "JST"
         },
         files: {
           "boiler/gen/templates.js": [
-            "boiler/src/assets/templates/*.html"
+            "boiler/src/assets/templates/**/*.html"
           ]
         }
       }

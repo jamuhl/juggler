@@ -26,7 +26,7 @@ function(Backbone, SlideEffect) {
             // Setting default styles
            // view.$el.css({position:'absolute', visibility:'hidden', overflow:'hidden', width:'100%', height:'100%'});
            // view.$el.css({position:'absolute', visibility:'hidden'});
-              view.$el.css({position:'absolute', width: '100%'});
+              view.$el.css(stackNavigator.css);
               stackNavigator.$el.append(view.el);
 
 
@@ -402,7 +402,7 @@ function(Backbone, SlideEffect) {
              * */
             initialize:function (options) {
                 // Setting default styles
-                this.$el.css({overflow:'hidden'});
+                // this.$el.css({overflow:'hidden'});
 
                 // Setting new viewsStack array
                 this.viewsStack = [];
@@ -415,6 +415,9 @@ function(Backbone, SlideEffect) {
 
                 // Setting default push transition
                 if (options.pushTransition) this.defaultPushTransition = options.pushTransition;
+
+                // css to add to view when appending
+                this.css = options.css || {}; 
             },
 
             /**

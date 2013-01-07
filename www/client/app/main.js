@@ -14,6 +14,7 @@ require([
     //"modules/layout/layout",
 
     // pages
+    "modules/bars/title",
     "modules/demo/home"
 ],
 
@@ -27,13 +28,30 @@ function(ns, $, Backbone) {
     // turn on debugging
     app.debug = false;
 
+    // regions
     app.addRegions({
-        content: {
-            selector: '.content',
+        title: {
+            selector: '.bar-title',
             regionType: ns.StackRegion
         }
     });
+    app.content = new ns.StackRegion({
+        el: '.content',
+        css: { position:'absolute', width: '100%' }
+    });
 
+    // push/pop
+    app.push = function(container) {
+        _.each(container, function(value, key, index) {
+            if (app[key] && app[key].push) app[key].push(value);
+        });
+    };
+    app.pop = function() {
+        app.content.pop();
+        app.title.pop();
+    };
+
+    // initialize
     app.addAsyncInitializer(function(options, done) {
         if (app.isMobile) {
             // This is running on a device so waiting for deviceready event
@@ -46,7 +64,7 @@ function(ns, $, Backbone) {
 
     app.start(function() {
         $('.content').html('');
-        Backbone.history.start(/*{ pushState: true }*/);  
+        Backbone.history.start(/*{ pushState: true }*/);
     });
 
 });
