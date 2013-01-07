@@ -1,6 +1,6 @@
 {
   "author": "jamuhl"
-  , "name": "backbone-phonegap-boilerplate"
+  , "name": "juggler"
   , "version": "0.0.0"
   , "private": true
   , "engines": {
@@ -17,7 +17,6 @@
     }
   , "devDependencies": {
       "grunt": "*"
-    , "grunt-contrib": ">=0.1.0"
     , "grunt-contrib": ">=0.1.0"
     , "grunt-contrib-jade": "https://github.com/Dignifiedquire/grunt-contrib-jade/tarball/multiple"
     , "grunt-shell": ">=0.1.0"
