@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     /* phonegap cli bridge - iOS */
     iOS: {
       emulate: {
-        bin: 'emulate'
+        bin: 'emulate' /* brew install ios-sim */
       },
       debug: {
         bin: 'debug'
@@ -264,12 +264,12 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('iOS:init', 'shell:createIOS');
+  grunt.registerTask('iOS:create', 'shell:createIOS');
   grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade');
   grunt.registerTask('iOS:dist', 'iOS:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
   grunt.registerTask('iOS:build', 'clean:iOS iOS:dist copy:distToIOS iOS:debug');
 
-  grunt.registerTask('android:init', 'shell:createAndroid');
+  grunt.registerTask('android:create', 'shell:createAndroid');
   grunt.registerTask('android:boil', 'clean:boiler copy:boilClient copy:boilAndroid stylus jade');
   grunt.registerTask('android:dist', 'android:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
   grunt.registerTask('android:build', 'android:clean clean:android android:dist copy:distToAndroid android:debug');
