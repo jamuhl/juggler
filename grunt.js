@@ -264,6 +264,17 @@ module.exports = function(grunt) {
             "assets": "boiler/dist/assets"
         }
       }
+    },
+
+    watch: {
+      iOS: {
+        files: ["www/client/**/*", "www/iOS/**/*"],
+        tasks: "iOS:boil"
+      },
+      android: {
+        files: ["www/client/**/*", "www/android/**/*"],
+        tasks: "android:boil"
+      }
     }
 
   });
@@ -272,11 +283,13 @@ module.exports = function(grunt) {
   grunt.registerTask('iOS:boil', 'clean:boiler copy:boilClient copy:boilIOS stylus jade');
   grunt.registerTask('iOS:dist', 'iOS:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
   grunt.registerTask('iOS:build', 'clean:iOS iOS:dist copy:distToIOS iOS:debug');
+  grunt.registerTask('iOS:watch', 'watch:iOS');
 
   grunt.registerTask('android:create', 'shell:createAndroid');
   grunt.registerTask('android:boil', 'clean:boiler copy:boilClient copy:boilAndroid stylus jade');
   grunt.registerTask('android:dist', 'android:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
   grunt.registerTask('android:build', 'android:clean clean:android android:dist copy:distToAndroid android:debug');
+  grunt.registerTask('android:watch', 'watch:android');
  
   grunt.registerTask('build', 'iOS:build android:build');
 

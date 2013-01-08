@@ -33,6 +33,9 @@ define(['./Effect'], function (Effect) {
                 // Registering transition end handler
                 $fromView.one(that.transitionEndEvent, transitionEndHandler);
 
+                // Setting initial opacity
+                $fromView.css('opacity', 1);
+
                 // Setting transition css props
                 $fromView.css(transitionProp, ['opacity ', that.fromViewTransitionProps.duration, 's ',
                                                that.fromViewTransitionProps.easing, ' ',
@@ -45,7 +48,7 @@ define(['./Effect'], function (Effect) {
                 $toView.one(that.transitionEndEvent, transitionEndHandler);
 
                 // Setting initial opacity
-                $toView.css('opacity', 0);
+                $toView.css('opacity', 0.01);
 
                 // Setting transition css props
                 $toView.css(transitionProp, ['opacity ', that.toViewTransitionProps.duration, 's ',
@@ -84,7 +87,7 @@ define(['./Effect'], function (Effect) {
             }, transDuration * 1.5 * 1000);
 
             if ($toView) $toView.css('opacity', 1);
-            if ($fromView) $fromView.css('opacity', 0);
+            if ($fromView) $fromView.css('opacity', 0.01);
         }
     });
 

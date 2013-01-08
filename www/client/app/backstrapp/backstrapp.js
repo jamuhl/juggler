@@ -7,10 +7,11 @@ define([
     './baseController',
     './baseRouter',
     './stackRegion',
+    './stackManager',
     './qs'
 ],
 
-function(_, Backbone, BackstrappMarionette, BaseCollection, BaseModel, BaseController, baseRouter, stackRegion, qs) {
+function(_, Backbone, BackstrappMarionette, BaseCollection, BaseModel, BaseController, baseRouter, stackRegion, stackManager, qs) {
 
 	// override Backbone sync
 	Backbone.sync = function(method, model, options) {
@@ -35,6 +36,9 @@ function(_, Backbone, BackstrappMarionette, BaseCollection, BaseModel, BaseContr
 
     // bootstrap namespace
 	var ns = _.extend({}, BackstrappMarionette);
+
+    // init stackManager
+    stackManager.init(ns);
 
 	ns.Collection = BaseCollection;
 	ns.Model = BaseModel;

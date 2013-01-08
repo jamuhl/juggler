@@ -24,10 +24,10 @@ function(Backbone, SlideEffect) {
             if (typeof view.destructionPolicy === 'undefined') view.destructionPolicy = 'auto';
 
             // Setting default styles
-           // view.$el.css({position:'absolute', visibility:'hidden', overflow:'hidden', width:'100%', height:'100%'});
-           // view.$el.css({position:'absolute', visibility:'hidden'});
-              view.$el.css(stackNavigator.css);
-              stackNavigator.$el.append(view.el);
+            // view.$el.css({position:'absolute', visibility:'hidden', overflow:'hidden', width:'100%', height:'100%'});
+            // view.$el.css({position:'absolute', visibility:'hidden'});
+            view.$el.css(stackNavigator.css);
+            stackNavigator.$el.append(view.el);
 
 
         } else {

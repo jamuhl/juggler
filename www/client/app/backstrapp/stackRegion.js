@@ -14,17 +14,33 @@ function(_, Backbone, Marionette, StackNavigator) {
                 el: this.el,
                 css: options.css || {}
             });
+
+            this.$el = $(this.el);
         },
 
-        push: function(view) {
+        push: function(view, transition) {
             // this.$el.hide();
             // this.$el.html(view.el);
             // this.$el.slideDown("fast");
-            this.stackNavigator.pushView(view);
+            if (this.isHidden) this.show();
+            this.stackNavigator.pushView(view, transition);
         },
 
-        pop: function() {
-            this.stackNavigator.popView();
+        pop: function(transition) {
+            if (this.isHidden) this.show();
+            this.stackNavigator.popView(transition);
+        },
+
+        show: function() {
+            this.$el.show();
+            this.$el.removeClass('hidden');
+            this.isHidden = false;
+        },
+
+        hide: function() {
+            this.$el.hide();
+            this.$el.addClass('hidden');
+            this.isHidden = true;
         }
     });
 
