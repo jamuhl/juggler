@@ -17,7 +17,7 @@ function(_, effects) {
       this.app.stack.effects = effects;
 
       this.app.push = function(container) { self.push(container); };
-      this.app.pop = function() { self.pop(); };
+      this.app.pop = function(container) { self.pop(container); };
     },
 
     stackRegions: [],
@@ -34,33 +34,37 @@ function(_, effects) {
     push: function(container) {
       var self = this;
 
+      container.effects = container.effects || {};
+
       // push views
-      _.each(container.stacks, function(value, key, index) {
-        if (self.app[key] && self.app[key].push) self.app[key].push(value, value.pushEffect);
+      _.each(container.views, function(value, key, index) {
+        if (self.app[key] && self.app[key].push) self.app[key].push(value, container.effects[key] || value.pushEffect);
       });
 
-      var toHide = _.difference(this.stackRegions, _.keys(container.stacks));
+      var toHide = _.difference(this.stackRegions, _.keys(container.views));
       _.each(toHide, function(key) {
-        if (self.app[key] && self.app[key].hide) self.app[key].hide();
+        if (self.app[key] && self.app[key].hide) self.app[key].hide(container.effects[key]);
       });
 
       this.viewStack.push(container);
 
     },
 
-    pop: function() {
+    pop: function(container) {
       var self = this;
 
-      var container = this.viewStack.pop();
+      container = container || {};
+      _.defaults(container, this.viewStack.pop());
+      container.effects = container.effects || {};
 
-      var toShow = _.difference(this.stackRegions, _.keys(container.stacks));
+      var toShow = _.difference(this.stackRegions, _.keys(container.views));
       _.each(toShow, function(key) {
-        if (self.app[key] && self.app[key].show) self.app[key].show();
+        if (self.app[key] && self.app[key].show) self.app[key].show(container.effects[key]);
       });
 
       // pop views
-      _.each(container.stacks, function(value, key, index) {
-        if (self.app[key] && self.app[key].pop) self.app[key].pop(value.popEffect);
+      _.each(container.views, function(value, key, index) {
+        if (value !== 'keep' && self.app[key] && self.app[key].pop) self.app[key].pop(container.effects[key] || value.popEffect);
       });
     }
 

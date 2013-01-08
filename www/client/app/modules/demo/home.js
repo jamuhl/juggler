@@ -13,7 +13,7 @@ function(ns) {
       var view = new module.Views.Main();
 
       app.push({
-        stacks: {
+        views: {
           content: view,
           title: new ns.modules.bars.Views.Main({
             model: new Backbone.Model({ title: 'home' })
@@ -26,11 +26,15 @@ function(ns) {
       var view = new module.Views.Next();
 
       app.push({
-        stacks: {
-          content: view,
-          title: new ns.modules.bars.Views.Main({
-            model: new Backbone.Model({ title: 'next' })
-          })
+        effects: {
+          content: app.stack.effects.fade
+        },
+        views: {
+          content: view
+          // , title: new ns.modules.bars.Views.Main({
+          //   model: new Backbone.Model({ title: 'next' })
+          // })
+          , title: 'keep'
         }
       });
     }
@@ -83,7 +87,12 @@ function(ns) {
       e.preventDefault();
 
       // module.controller.navigate('home');
-      app.pop();
+      app.pop({
+        effects: {
+          content: app.stack.effects.slide,
+          title: app.stack.effects.fade
+        }
+      });
     }
   });
 });

@@ -31,14 +31,22 @@ function(_, Backbone, Marionette, StackNavigator) {
             this.stackNavigator.popView(transition);
         },
 
-        show: function() {
-            this.$el.show();
+        show: function(transition) {
+            if (transition) {
+                transition.play(null, this.$el, function() { this.$el.show(); }, this);
+            } else {
+                this.$el.show();
+            }
             this.$el.removeClass('hidden');
             this.isHidden = false;
         },
 
-        hide: function() {
-            this.$el.hide();
+        hide: function(transition) {
+            if (transition) {
+                transition.play(this.$el, null, function() { this.$el.hide(); }, this);
+            } else {
+                this.$el.hide();
+            }
             this.$el.addClass('hidden');
             this.isHidden = true;
         }

@@ -22,6 +22,7 @@ define(['./Effect'], function (Effect) {
 
                     if (activeTransitions == 0 && callback) {
                         if (timeout) clearTimeout(timeout);
+                        if ($fromView) $fromView.css('opacity', 1);
                         callback.call(context);
                     }
                 }
@@ -35,6 +36,7 @@ define(['./Effect'], function (Effect) {
 
                 // Setting initial opacity
                 $fromView.css('opacity', 1);
+                if ($fromView.css('display') === 'none') $fromView.show();
 
                 // Setting transition css props
                 $fromView.css(transitionProp, ['opacity ', that.fromViewTransitionProps.duration, 's ',
@@ -49,6 +51,7 @@ define(['./Effect'], function (Effect) {
 
                 // Setting initial opacity
                 $toView.css('opacity', 0.01);
+                if ($toView.css('display') === 'none') $toView.show();
 
                 // Setting transition css props
                 $toView.css(transitionProp, ['opacity ', that.toViewTransitionProps.duration, 's ',
@@ -75,11 +78,13 @@ define(['./Effect'], function (Effect) {
                     if ($toView) {
                         $toView.off(that.transitionEndEvent, transitionEndHandler);
                         $toView.css(transitionProp, '');
+                        $toView.css('opacity', 1);
                     }
 
                     if ($fromView) {
                         $fromView.off(that.transitionEndEvent, transitionEndHandler);
                         $fromView.css(transitionProp, '');
+                        $fromView.css('opacity', 0);
                     }
 
                     callback.call(context);
