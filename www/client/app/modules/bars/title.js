@@ -8,11 +8,12 @@ function(ns) {
     // Create a new module
     var module = ns.module();
 
-    module.Views.Directional = ns.ItemView.extend({
+    module.Views.Title = ns.ItemView.extend({
         tagName: 'div',
-        template: 'bars/directional',
+        template: 'bars/title',
 
         initialize: function(options) {
+            options = options || {};
             this.model = this.model || new ns.Model({
                 title: options.title,
                 back: options.back || 'back',
@@ -33,6 +34,9 @@ function(ns) {
         onRender: function() {
             if (this.options.back === false) this.$('.back').hide();
             if (this.options.next === false) this.$('.next').hide();
+
+            this.$('.back').addClass(this.options.backClass || 'button-prev');
+            this.$('.next').addClass(this.options.nextClass || 'booton-next');
         }
     });
 

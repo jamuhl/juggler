@@ -32,13 +32,15 @@ function(ns, $, Backbone) {
   // you could add regions like this app.addRegions({});
   // or use stackRegions for transitioning
   app.stack.addStackRegion('content', '.content', {
-    css: { position:'absolute', width: '100%', background: '#ffffff' }
+    css: { position:'absolute', width: '100%' }
   });
 
-  app.stack.addStackRegion('title', '.bar-title');
+  app.stack.addStackRegion('title', '.bar-title', {
+    css: { display: 'box', 'box-orient': 'horizontal' }
+  });
   app.stack.addStackRegion('header', '.bar-standard');
   app.stack.addStackRegion('subheader', '.bar-standard-secondary');
-  app.stack.addStackRegion('tabs', '.bar-tab');
+  app.stack.addStackRegion('tab', '.bar-tab');
 
   // initialize
   app.addAsyncInitializer(function(options, done) {

@@ -13,7 +13,7 @@ function(ns) {
       app.push({
         views: {
           content: new module.Views.Main(),
-          title: new app.Bars.Directional({
+          title: new app.Bars.Title({
             title: 'Welcome to Juggler',
             back: false,
             next: false

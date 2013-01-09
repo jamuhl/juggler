@@ -13,11 +13,29 @@ function(ns) {
       app.push({
         views: {
           content: new module.Views.Main(),
-          title: new app.Bars.Directional({
+          title: new app.Bars.Segment({
             title: 'Page Transitions',
             back: 'back',
-            next: false
-          })
+            next: false,
+            segments: [
+              {
+                label: 'Home',
+                target: 'home',
+                active: true
+              },
+              {
+                label: 'Home2',
+                target: 'home'
+              }
+            ]
+          }),
+          tab: new app.Bars.Tab([
+            {
+              label: 'Home',
+              iconClass: 'icon-home',
+              target: 'home'
+            }
+          ])
         }
       });
     },
@@ -28,12 +46,13 @@ function(ns) {
         },
         views: {
           content: new module.Views.TransitionDone(),
-          title: new app.Bars.Directional({
+          title: new app.Bars.Title({
             title: 'Slide',
             back: 'back',
             next: false
           })
-        }
+        },
+        tab: 'keep'
       });
     },
     'transition-fade': function() {
@@ -44,12 +63,13 @@ function(ns) {
         },
         views: {
           content: new module.Views.TransitionDone(),
-          title: new app.Bars.Directional({
+          title: new app.Bars.Title({
             title: 'Fade',
             back: 'back',
             next: false
           })
-        }
+        },
+        tab: 'keep'
       });
     },
     'transition-stack': function() {
@@ -60,12 +80,13 @@ function(ns) {
         },
         views: {
           content: new module.Views.TransitionDone(),
-          title: new app.Bars.Directional({
+          title: new app.Bars.Title({
             title: 'Stack',
             back: 'back',
             next: false
           })
-        }
+        },
+        tab: 'keep'
       });
     },
     'transition-noeffect': function() {
@@ -76,12 +97,13 @@ function(ns) {
         },
         views: {
           content: new module.Views.TransitionDone(),
-          title: new app.Bars.Directional({
+          title: new app.Bars.Title({
             title: 'NoEffect',
             back: 'back',
             next: false
           })
-        }
+        },
+        tab: 'keep'
       });
     }
   });

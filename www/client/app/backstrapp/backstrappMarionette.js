@@ -182,6 +182,7 @@ function(_, Backbone, Marionette, Handlebars, Loader) {
     
     ns.renderer.renderTemplate = function (template, data) {
         if (!template) return null;
+        if (typeof template == 'string') template = mario.TemplateCache.get(template);
         var rendering = template(data);
         //if ($.i18n && rendering && rendering.length > 2) $(rendering).i18n();
         return rendering;
