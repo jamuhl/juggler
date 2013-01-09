@@ -36,6 +36,9 @@ function(ns, $, Backbone) {
   });
 
   app.stack.addStackRegion('title', '.bar-title');
+  app.stack.addStackRegion('header', '.bar-standard');
+  app.stack.addStackRegion('subheader', '.bar-standard-secondary');
+  app.stack.addStackRegion('tabs', '.bar-tab');
 
   // initialize
   app.addAsyncInitializer(function(options, done) {
@@ -49,8 +52,7 @@ function(ns, $, Backbone) {
   });
 
   app.start(function() {
-    $('.content').html('');
-    Backbone.history.start(/*{ pushState: true }*/);
+    Backbone.history.start({ pushState: true });
   });
 
 });

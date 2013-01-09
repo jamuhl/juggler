@@ -14,11 +14,11 @@ html(lang="en")
 
 
   body
-    .bar-title
-    //- .bar-standard
-    //- .bar-standard.bar-header-secondary
-    //- .bar-tab
-    .content
+    .bar-title(style="display: none;")
+    .bar-standard(style="display: none;")
+    .bar-standard.bar-header-secondary(style="display: none;")
+    .bar-tab(style="display: none;")
+    .content(style="display: none;")
 
     if options.debug
         script(src='assets/js/libs/require.js', data-main='app/config')

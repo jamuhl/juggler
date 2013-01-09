@@ -38,7 +38,7 @@ function(_, effects) {
 
       // push views
       _.each(container.views, function(value, key, index) {
-        if (self.app[key] && self.app[key].push) self.app[key].push(value, container.effects[key] || value.pushEffect);
+        if (value !== 'keep' && self.app[key] && self.app[key].push) self.app[key].push(value, container.effects[key] || value.pushEffect);
       });
 
       var toHide = _.difference(this.stackRegions, _.keys(container.views));
@@ -57,7 +57,7 @@ function(_, effects) {
       _.defaults(container, this.viewStack.pop());
       container.effects = container.effects || {};
 
-      var toShow = _.difference(this.stackRegions, _.keys(container.views));
+      var toShow = _.difference(_.keys(this.viewStack[0].views), _.keys(container.views));
       _.each(toShow, function(key) {
         if (self.app[key] && self.app[key].show) self.app[key].show(container.effects[key]);
       });

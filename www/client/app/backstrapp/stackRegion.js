@@ -16,6 +16,8 @@ function(_, Backbone, Marionette, StackNavigator) {
             });
 
             this.$el = $(this.el);
+            this.$el.addClass('hidden');
+            this.isHidden = true;
         },
 
         push: function(view, transition) {
