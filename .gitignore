@@ -14,13 +14,3 @@ node_modules
 node_modules/**/*
 
 # exclude generated assets
-boiler
-boiler/**/*
-
-
-# exclude projects
-android
-android/**/*
-
-iOS
-iOS/**/*
