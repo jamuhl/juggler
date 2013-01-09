@@ -64,7 +64,7 @@ function(_, effects) {
 
       // pop views
       _.each(container.views, function(value, key, index) {
-        if (value !== 'keep' && self.app[key] && self.app[key].pop) self.app[key].pop(container.effects[key] || value.popEffect);
+        if (value !== 'keep' && self.app[key] && self.app[key].pop) self.app[key].pop((container.effects[key] ? container.effects[key].reverse : null )|| value.popEffect);
       });
     }
 

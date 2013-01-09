@@ -14,8 +14,8 @@ require([
   //"modules/layout/layout",
 
   // pages
-  "modules/bars/title",
-  "modules/demo/home"
+  "modules/bars/bars",
+  "modules/demo/views"
 ],
 
 function(ns, $, Backbone) {
@@ -32,7 +32,7 @@ function(ns, $, Backbone) {
   // you could add regions like this app.addRegions({});
   // or use stackRegions for transitioning
   app.stack.addStackRegion('content', '.content', {
-    css: { position:'absolute', width: '100%' }
+    css: { position:'absolute', width: '100%', background: '#ffffff' }
   });
 
   app.stack.addStackRegion('title', '.bar-title');
@@ -52,7 +52,7 @@ function(ns, $, Backbone) {
   });
 
   app.start(function() {
-    Backbone.history.start({ pushState: true });
+    Backbone.history.start(/*{ pushState: true }*/);
   });
 
 });

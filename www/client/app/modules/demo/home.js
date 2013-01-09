@@ -10,31 +10,14 @@ function(ns) {
 
   var Controller = ns.Controller.extend({
     home: function() {
-      var view = new module.Views.Main();
-
       app.push({
         views: {
-          content: view,
-          title: new ns.modules.bars.Views.Main({
-            model: new Backbone.Model({ title: 'home' })
+          content: new module.Views.Main(),
+          title: new app.Bars.Directional({
+            title: 'Welcome to Juggler',
+            back: false,
+            next: false
           })
-        }
-      });
-    },
-
-    next: function() {
-      var view = new module.Views.Next();
-
-      app.push({
-        effects: {
-          content: app.stack.effects.fade
-        },
-        views: {
-          content: view
-          // , title: new ns.modules.bars.Views.Main({
-          //   model: new Backbone.Model({ title: 'next' })
-          // })
-          , title: 'keep'
         }
       });
     }
@@ -44,8 +27,7 @@ function(ns) {
   var Router = ns.Router.extend({
     appRoutes: {
       '': 'home',
-      'home': 'home',
-      'next': 'next'
+      'home': 'home'
     },
     
     controller: module.controller
@@ -56,43 +38,15 @@ function(ns) {
     tagName: 'div',
     template: 'demo/home',
 
-    initialize: function(options) {
-    },
-
     events: {
-      'click .next': 'next'
+      'click .transitions': 'navToTransitions'
     },
 
-    next: function(e) {
+    navToTransitions: function(e) {
       e.preventDefault();
 
-      module.controller.navigate('next');
+      module.controller.navigate('transitions');
     }
   });
 
-  module.Views.Next = ns.ItemView.extend({
-    tagName: 'div',
-    template: 'demo/next',
-
-    popEffect: app.stack.effects.fade,
-
-    initialize: function(options) {
-    },
-
-    events: {
-      'click .back': 'back'
-    },
-
-    back: function(e) {
-      e.preventDefault();
-
-      // module.controller.navigate('home');
-      app.pop({
-        effects: {
-          content: app.stack.effects.slide,
-          title: app.stack.effects.fade
-        }
-      });
-    }
-  });
 });
