@@ -1,0 +1,73 @@
+- var path = '../'
+- var title = 'juggler - getting started'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .hero-unit
+        h2 Getting started:
+
+      .row-fluid 
+          .span4
+            h4.feature-title Install juggler's command line tool:
+          .span8
+            .feature
+              pre
+                code
+                  |npm install -g juggl
+        .row-fluid 
+          .span4
+            h4.feature-title Create a new project:
+          .span8
+            .feature
+              pre
+                code
+                  |mkdir myapp
+                  |cd myapp
+                  |// init juggler project template
+                  |juggl init:juggler
+                  |// -> for now you will need to set path and projectname in grunt.js file
+        
+        .row-fluid 
+          .span4
+            h4.feature-title Add a device:
+          .span8
+            .feature
+              pre
+                code
+                  |// create iOS phonegap application
+                  |juggl iOS:create
+                  |// build webapp
+                  |juggl iOS:build
+                  |// start iOS emulator (brew install ios-sim -- to use sim from commandline)
+                  |juggl iOS:emulate
+        
+        .row-fluid 
+          .span4
+            h4.feature-title Test / Debug App in Browser:
+          .span8
+            .feature
+              pre
+                code
+                  |// build debug app
+                  |juggl iOS:boil
+                  |// start built in server
+                  |juggl server
+                  |// -> head your browser to localhost:8000
+
+              .alert.alert-info.feature-description
+                p 
+                  | You might want to try the 
+                  a(url='https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc', target="_blank") Ripple Emulator
+                  |  for better testing in chrome browser.
+                
+    include ../includes/layout/extra
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts

@@ -1,0 +1,74 @@
+- var path = ''
+- var version = '1.5.10'
+!!! 5
+html(lang="en")
+  head
+    include includes/layout/head
+
+  body
+    include includes/layout/header
+          
+    include includes/layout/content
+      .row-fluid
+        .span6
+          .hero-unit
+            .hero-text
+              h2 
+                | juggler
+                small  - juggling with mobiles
+
+              p.lead
+                | Easily create mobile apps with 
+                strong HTML5
+                | , 
+                strong CSS 
+                | and 
+                strong JavaScript
+                | .
+              p
+                | Juggler is a free and open source framework to build html5 mobile apps and
+                | deploying them to devices thanks to phonegap.
+
+              p
+                ol.unstyled
+                  li 
+                    i.icon-ok
+                    |  Backbone, Backbone Marionette boilerplate
+                  li 
+                    i.icon-ok
+                    |  Using require.js as module loader
+                  li 
+                    i.icon-ok
+                    |  Integrated phonegap
+                  li 
+                    i.icon-ok
+                    |  Ratchet CSS UI Components
+                  li 
+                    i.icon-ok
+                    |  juggl as build tool (grunt.js)
+
+          h4 Install the juggler commandline tool:
+          pre
+            code
+              | npm install -g juggl
+          p
+            | Alternatively you could just clone the repository.
+
+          a.btn.btn-large.btn-warning(href='#{path}pages/gettingstarted.html') 
+            i.icon-lightbulb.icon-2x
+            |  Getting started
+
+        .span6
+          .device.iphone
+            iframe(src="#{path}public/devices/ios/index.html")
+              .bar-title
+              //- .bar-standard
+              //- .bar-standard.bar-header-secondary
+              //- .bar-tab
+              .content
+
+    include includes/layout/extra
+      
+    include includes/layout/footer
+    
+    include includes/layout/endscripts
