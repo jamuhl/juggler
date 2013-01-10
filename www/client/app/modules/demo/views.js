@@ -3,7 +3,8 @@ define([
     'underscore',
      './home',
      './transitions',
-     './regions'
+     './regions',
+     './ratchet'
 ],
 
 function(ns, _) {

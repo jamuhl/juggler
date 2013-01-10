@@ -40,7 +40,7 @@ function(ns, $, Backbone) {
 
   // initialize
   app.addAsyncInitializer(function(options, done) {
-    if (app.isMobile) {
+    if (app.isMobile && app.isUIWebView) {
       // This is running on a device so waiting for deviceready event
       document.addEventListener('deviceready', done);
     } else {
