@@ -21,16 +21,18 @@ function(_, Backbone, Marionette, Handlebars, Loader) {
     mario.Region.prototype.log = function(obj, view, transition, action) {
         if (ns.app.debug !== true) return;
 
-        var msg = 'region --- ' + action.toUpperCase();
+        transition = transition || { name: 'defaultEffect' };
+
+        var msg = 'region --- ' + action.toUpperCase() + ' (with ' + transition.name + ')';
 
         if (view && view.template) {
             msg = view.cid + '::' + view.template +
-            ' --- ' + action.toUpperCase();
+            ' --- ' + action.toUpperCase() + ' (with ' + transition.name + ')';
         }
 
         if (view && view.itemView) {
             msg = view.cid + '::' + view.itemView.prototype.template + '_Collection' + 
-            ' --- ' + view.collection.length + ' ITEMS ' + action.toUpperCase();
+            ' --- ' + view.collection.length + ' ITEMS ' + action.toUpperCase() + ' (with ' + transition.name + ')';
         }
 
         if (ns.app.log('info', msg, obj));

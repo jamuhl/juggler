@@ -1,6 +1,9 @@
 define(['./Effect'], function (Effect) {
 
-    var NoEffect = Effect.extend();
+    var NoEffect = Effect.extend({
+        name: 'NoEffect'
+    });
+
     NoEffect.prototype.play = function (fromView, toView, callback, context) {
 
         var $toView = toView && toView.$el,
@@ -8,8 +11,10 @@ define(['./Effect'], function (Effect) {
         
         if($toView != $fromView){
             
-            if ($toView)
+            if ($toView) {
                 $toView.css( $toView.pushCSS || {'display': 'block'});
+                $toView.css('visibility', 'visible');
+            }
 
             if ($fromView)    
                 $fromView.css('display', 'none');

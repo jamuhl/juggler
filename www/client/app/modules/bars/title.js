@@ -12,6 +12,8 @@ function(ns) {
         tagName: 'div',
         template: 'bars/title',
 
+        allowAutoStackPositioning: true,
+
         initialize: function(options) {
             options = options || {};
             this.model = this.model || new ns.Model({

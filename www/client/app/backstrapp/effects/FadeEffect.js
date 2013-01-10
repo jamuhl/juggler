@@ -2,6 +2,8 @@ define(['./Effect'], function (Effect) {
 
     var FadeEffect = Effect.extend({
 
+        name: 'FadeEffect',
+
         fromViewTransitionProps:{duration:0.4, easing:'linear', delay:0.1},
 
         toViewTransitionProps:{duration:0.4, easing:'linear', delay:0.1},

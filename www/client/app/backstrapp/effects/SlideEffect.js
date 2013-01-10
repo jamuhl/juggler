@@ -2,6 +2,8 @@ define(['./Effect'], function (Effect) {
 
     var SlideEffect = Effect.extend({
 
+        name: 'SlideEffect',
+
         direction:'left',
 
         fromViewTransitionProps:{duration:0.4, easing:'ease-out', delay:0},
@@ -29,7 +31,15 @@ define(['./Effect'], function (Effect) {
                     $target.css(transformProp, '');
                     $target.css(transitionProp, '');
 
-                    if ($toView && $toView[0] == event.target) $toView.css('left', 0);
+                    if ($toView && $toView[0] == event.target) {
+                        $toView.css('left', 0);
+                        if (that.addedPositionCSS) {
+                            $toView.css('position', '');
+                            $toView.css('width', '');
+                            $toView.removeClass('stackPositioned');
+                            that.addedPositionCSS = false;
+                        }
+                    }
 
                     if (activeTransitions == 0 && callback) {
                         if (timeout) clearTimeout(timeout);
@@ -60,8 +70,18 @@ define(['./Effect'], function (Effect) {
                                              that.toViewTransitionProps.easing, ' ',
                                              that.toViewTransitionProps.delay, 's'].join(''));
 
+                
+                toView.pushCSS = toView.pushCSS || {};
+                if (toView.allowAutoStackPositioning && !toView.pushCSS.position && !toView.pushCSS.width) {
+                    that.addedPositionCSS = true;
+                    $toView.css({position: 'relative', width: '100%'});
+                    $toView.addClass('stackPositioned');
+                }
+                $toView.css(toView.pushCSS);
+                context.$el.css('width'); // reflow
+
                 // Showing the view
-                $toView.css(toView.pushCSS || {'visibility': 'visible'});
+                $toView.css('visibility', 'visible');
             }
 
             if ($fromView || $toView) {
@@ -86,6 +106,12 @@ define(['./Effect'], function (Effect) {
                         $toView.css(transitionProp, '');
                         $toView.css(transformProp, '');
                         $toView.css('left', 0);
+                        if (that.addedPositionCSS) {
+                            $toView.css('position', '');
+                            $toView.css('width', '');
+                            $toView.removeClass('stackPositioned');
+                            that.addedPositionCSS = false;
+                        }
                     }
 
                     if ($fromView) {

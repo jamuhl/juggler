@@ -7,25 +7,28 @@
 
 
 /* fix padding for hidden */
-.bar-title ~ .content {
-  top: 0;
-}
-.bar-tab ~ .content {
-  bottom: 0;
-}
-.bar-header-secondary ~ .content {
-  top: 0;
-}
+.bar-title ~ .content
+  top: 0
 
-.bar-title:not(.hidden) ~ .content {
-  top: 44px;
-}
-.bar-header:not(.hidden) ~ .content {
-  top: 44px;
-}
-.bar-tab:not(.hidden) ~ .content {
-  bottom: 51px;
-}
-.bar-header-secondary:not(.hidden) ~ .content {
-  top: 88px;
-}
+.bar-tab ~ .content
+  bottom: 0
+
+.bar-header-secondary ~ .content
+  top: 0
+
+.bar-title:not(.hidden) ~ .content
+  top: 44px
+
+.bar-header:not(.hidden) ~ .content
+  top: 44px
+
+.bar-tab:not(.hidden) ~ .content
+  bottom: 51px
+
+.bar-header-secondary:not(.hidden) ~ .content
+  top: 88px
+
+
+/* fixing bar-title if relative */
+.bar-title div.stackPositioned h1
+  top: -5px

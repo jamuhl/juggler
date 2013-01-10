@@ -133,7 +133,8 @@ function(ns) {
   module.Views.RegionSecondHeader = ns.ItemView.extend({
     tagName: 'div',
     template: 'demo/regionSecondHeader',
-    pushCSS: { width: '100%', 'box-sizing': 'border-box' }
+    allowAutoStackPositioning: true,
+    pushCSS: { 'box-sizing': 'border-box' }
   });
 
 });

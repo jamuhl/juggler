@@ -2,6 +2,8 @@ define(['./Effect'], function (Effect) {
 
     var StackEffect = Effect.extend({
 
+        name: 'StackEffect',
+
         direction:'left',
 
         fromViewTransitionProps:{duration:0.4, easing:'ease-out', delay:0.4},
@@ -38,7 +40,7 @@ define(['./Effect'], function (Effect) {
                 }
             };
 
-            if ($toView) {
+            if ($toView && that.direction === 'left') {
                 activeTransitions++;
 
                 $toView.one(that.transitionEndEvent, transitionEndHandler);
@@ -51,9 +53,12 @@ define(['./Effect'], function (Effect) {
 
                 // Showing the view
                 $toView.css('visibility', 'visible');
+                $toView.css('z-index', '100');
+            } else {
+                $toView.css('visibility', 'visible');
             }
 
-            if ($fromView) {
+            if ($fromView && that.direction === 'right') {
                 activeTransitions++;
 
                 $fromView.one(that.transitionEndEvent, transitionEndHandler);
@@ -90,6 +95,7 @@ define(['./Effect'], function (Effect) {
                     }
 
                     if ($fromView) {
+                        $fromView.css('visibility', 'hidden');
                         $fromView.off(that.transitionEndEvent, transitionEndHandler);
                         $fromView.css(transitionProp, '');
                         $fromView.css(transformProp, '');
@@ -99,12 +105,17 @@ define(['./Effect'], function (Effect) {
                 }
             }, transDuration * 1.5 * 1000);
 
-            var $views;
-            if ($fromView && $toView) $views = $fromView.add($toView);
-            else if ($toView) $views = $toView;
-            else if ($fromView) $views = $fromView;
+            // var $views;
+            // if ($fromView && $toView) $views = $fromView.add($toView);
+            // else if ($toView) $views = $toView;
+            // else if ($fromView) $views = $fromView;
 
-            if ($views) $views.css(transformProp, transformParams);
+            // if ($views) $views.css(transformProp, transformParams);
+            if (that.direction === 'left') {
+                if ($toView) $toView.css(transformProp, transformParams);
+            } else {
+                if ($fromView) $fromView.css(transformProp, transformParams);
+            }
         }
     });
 

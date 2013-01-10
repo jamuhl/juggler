@@ -12,6 +12,8 @@ function(ns) {
         tagName: 'div',
         template: 'bars/segment',
 
+        allowAutoStackPositioning: true,
+
         pushCSS: (function() {
             var css = {};
             css.display = app.vendorPrefixCSS + 'box';
@@ -34,7 +36,6 @@ function(ns) {
                 this.options.next = false;
 
                 var css = {};
-                css.width = '100%';
                 css['box-sizing'] = 'border-box';
                 this.pushCSS = css;
             }

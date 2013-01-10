@@ -42,6 +42,22 @@ function(ns) {
         tab: 'keep'
       });
     },
+    'transition-slide-reverse': function() {
+      app.push({
+        effects: {
+          title: app.stack.effects.noEffect,
+          content: app.stack.effects.slideReverse
+        },
+        views: {
+          content: new module.Views.TransitionDone(),
+          title: new app.Bars.Title({
+            title: 'Slide-reverse',
+            next: false
+          })
+        },
+        tab: 'keep'
+      });
+    },
     'transition-fade': function() {
       app.push({
         effects: {
@@ -99,6 +115,7 @@ function(ns) {
     appRoutes: {
       'transitions': 'transitions',
       'transitions/transition-slide': 'transition-slide',
+      'transitions/transition-slide-reverse': 'transition-slide-reverse',
       'transitions/transition-fade': 'transition-fade',
       'transitions/transition-stack': 'transition-stack',
       'transitions/transition-noeffect': 'transition-noeffect'
