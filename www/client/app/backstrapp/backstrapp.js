@@ -9,12 +9,13 @@ define([
     './stackRegion',
     './stackManager',
     './appSettings',
-    './qs'
+    './qs',
+    './effects/Effect'
 ],
 
 function(_, Backbone, BackstrappMarionette, 
     BaseCollection, BaseModel, BaseController, BaseRouter, 
-    stackRegion, stackManager, appSettings, qs) {
+    stackRegion, stackManager, appSettings, qs, effect) {
 
 	// override Backbone sync
 	Backbone.sync = function(method, model, options) {
@@ -50,6 +51,13 @@ function(_, Backbone, BackstrappMarionette,
 	ns.Router = BaseRouter;
     ns.StackRegion = stackRegion;
 	ns.qs = qs;
+
+    effect.prototype.log = function(lvl, msg, obj) {
+        if (ns.app.debug !== true) return;
+
+
+        if (ns.app.log(lvl, msg, obj));
+    };
 
 	return ns;
 });

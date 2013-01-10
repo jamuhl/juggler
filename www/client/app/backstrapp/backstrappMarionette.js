@@ -18,6 +18,24 @@ function(_, Backbone, Marionette, Handlebars, Loader) {
     ns.Layout = mario.Layout;
     ns.Region = mario.Region;
 
+    mario.Region.prototype.log = function(obj, view, transition, action) {
+        if (ns.app.debug !== true) return;
+
+        var msg = 'region --- ' + action.toUpperCase();
+
+        if (view && view.template) {
+            msg = view.cid + '::' + view.template +
+            ' --- ' + action.toUpperCase();
+        }
+
+        if (view && view.itemView) {
+            msg = view.cid + '::' + view.itemView.prototype.template + '_Collection' + 
+            ' --- ' + view.collection.length + ' ITEMS ' + action.toUpperCase();
+        }
+
+        if (ns.app.log('info', msg, obj));
+    };
+
     // views
     mario.View.prototype.log = function(obj, action) {
         if (ns.app.debug !== true) return;
@@ -163,7 +181,7 @@ function(_, Backbone, Marionette, Handlebars, Loader) {
     ns.app.log = function(lvl, msg, src) {
         if (ns.app.debug !== true) return;
         if (window.console && window.console.log) {
-            console.log(msg);
+            console.log(lvl.toUpperCase() + ':: ' + msg);
         }
     };
     ns.renderer = mario.Renderer;

@@ -54,7 +54,6 @@ define(['./Effect'], function (Effect) {
                 activeTransitions++;
 
                 $toView.one(that.transitionEndEvent, transitionEndHandler);
-var w = context.$el.width();
                 $toView.css('left', that.direction == 'left' ? context.$el.width() : -context.$el.width());
                 $toView.css(transitionProp, [transformProp, ' ',
                                              that.toViewTransitionProps.duration, 's ',
@@ -80,7 +79,7 @@ var w = context.$el.width();
                 if (activeTransitions > 0) {
                     activeTransitions = -1;
 
-                    console.log('Warning ' + that.transitionEndEvent + ' didn\'t trigger in expected time!');
+                    that.log('warn', 'Warning ' + that.transitionEndEvent + ' didn\'t trigger in expected time!', that);
 
                     if ($toView) {
                         $toView.off(that.transitionEndEvent, transitionEndHandler);

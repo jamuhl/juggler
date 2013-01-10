@@ -80,7 +80,7 @@ define(['./Effect'], function (Effect) {
                 if (activeTransitions > 0) {
                     activeTransitions = -1;
 
-                    console.log('Warning ' + that.transitionEndEvent + ' didn\'t trigger in expected time!');
+                    that.log('warn', 'Warning ' + that.transitionEndEvent + ' didn\'t trigger in expected time!', that);
 
                     if ($toView) {
                         $toView.off(that.transitionEndEvent, transitionEndHandler);

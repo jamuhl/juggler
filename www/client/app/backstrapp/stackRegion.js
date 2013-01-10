@@ -15,6 +15,8 @@ function(_, Backbone, Marionette, StackNavigator) {
                 css: options.css || {}
             });
 
+            this.name = options.name;
+
             this.$el = $(this.el);
             this.$el.addClass('hidden');
             this.isHidden = true;
@@ -26,14 +28,20 @@ function(_, Backbone, Marionette, StackNavigator) {
             // this.$el.slideDown("fast");
             if (this.isHidden) this.show();
             this.stackNavigator.pushView(view, transition);
+
+            this.log(this, view, transition, 'pushed to ' + this.name);
         },
 
-        pop: function(transition) {
-            if (this.isHidden) this.show();
+        pop: function(view, transition) {
+            //if (this.isHidden) this.show();
             this.stackNavigator.popView(transition);
+
+            this.log(this, view, transition, 'poped from ' + this.name);
         },
 
         show: function(transition) {
+            if (!this.isHidden) return;
+
             if (transition) {
                 transition.play(null, this, function() { this.$el.show(); }, this);
             } else {
@@ -41,9 +49,13 @@ function(_, Backbone, Marionette, StackNavigator) {
             }
             this.$el.removeClass('hidden');
             this.isHidden = false;
+
+            this.log(this, null, transition, 'showed ' + this.name);
         },
 
         hide: function(transition) {
+            if (this.isHidden) return;
+
             if (transition) {
                 transition.play(this, null, function() { this.$el.hide(); }, this);
             } else {
@@ -51,6 +63,8 @@ function(_, Backbone, Marionette, StackNavigator) {
             }
             this.$el.addClass('hidden');
             this.isHidden = true;
+
+            this.log(this, null, transition, 'hidden ' + this.name);
         }
     });
 

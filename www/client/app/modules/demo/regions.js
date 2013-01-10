@@ -12,30 +12,8 @@ function(ns) {
     regions: function() {
       app.push({
         views: {
-          content: new module.Views.Main()//,
-          // title: new app.Bars.Segment({
-          //   title: 'Page Transitions',
-          //   back: 'back',
-          //   next: false,
-          //   segments: [
-          //     {
-          //       label: 'Home',
-          //       target: 'home',
-          //       active: true
-          //     },
-          //     {
-          //       label: 'Home2',
-          //       target: 'home'
-          //     }
-          //   ]
-          // }),
-          // tab: new app.Bars.Tab([
-          //   {
-          //     label: 'Home',
-          //     iconClass: 'icon-home',
-          //     target: 'home'
-          //   }
-          // ])
+          content: new module.Views.Main(),
+          title: new app.Bars.Title({ title: 'Page Regions', next: false })
         }
       });
     },
@@ -46,9 +24,7 @@ function(ns) {
         },
         views: {
           content: new module.Views.RegionDone(),
-          title: new app.Bars.Title({
-            title: 'Title with buttons'
-          })
+          title: new app.Bars.Title({ title: 'Title with buttons', nextClass: 'button' })
         }
       });
     },
