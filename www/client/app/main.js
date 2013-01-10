@@ -24,7 +24,7 @@ function(ns, $, Backbone) {
   var app = ns.app;
 
   // turn on debugging
-  app.debug = true;
+  app.debug = false;
 
   // regions
   // you could add regions like this app.addRegions({});
