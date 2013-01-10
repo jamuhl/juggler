@@ -2,7 +2,8 @@ define([
     'namespace',
     'underscore',
      './home',
-     './transitions'
+     './transitions',
+     './regions'
 ],
 
 function(ns, _) {

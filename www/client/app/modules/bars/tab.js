@@ -37,6 +37,7 @@ function(Backbone, ns) {
         tagName: 'ul',
         className: 'tab-inner',
         itemView: module.Views.TabItem,
+        pushCSS: { display: '', width: '100%', 'box-sizing': 'border-box' },
 
         initialize: function(options) {
             options = options || {};

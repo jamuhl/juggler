@@ -39,13 +39,20 @@ function(ns) {
     template: 'demo/home',
 
     events: {
-      'click .transitions': 'navToTransitions'
+      //'click .transitions': 'navToTransitions'//,
+      //'click .regions': 'navToRegions'
     },
 
     navToTransitions: function(e) {
       e.preventDefault();
 
       module.controller.navigate('transitions');
+    },
+
+    navToRegions: function(e) {
+      e.preventDefault();
+
+      module.controller.navigate('regions');
     }
   });
 

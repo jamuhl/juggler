@@ -8,10 +8,12 @@ define(['./Effect'], function (Effect) {
 
         toViewTransitionProps:{duration:0.4, easing:'ease-out', delay:0},
 
-        play:function ($fromView, $toView, callback, context) {
+        play:function (fromView, toView, callback, context) {
 
             var timeout,
                 that = this,
+                $toView = toView && toView.$el,
+                $fromView = fromView && fromView.$el,
                 activeTransitions = 0,
                 transformParams,
                 transformProp = that.vendorPrefix == '' ? 'transform' :

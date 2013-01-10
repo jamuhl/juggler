@@ -6,28 +6,16 @@ function(ns) {
   var app = ns.app;
 
   // Create a new module
-  var module = ns.module({ name: 'demo', append: false });
+  var module = ns.module();
 
   var Controller = ns.Controller.extend({
     transitions: function() {
       app.push({
         views: {
           content: new module.Views.Main(),
-          title: new app.Bars.Segment({
+          title: new app.Bars.Title({
             title: 'Page Transitions',
-            back: 'back',
-            next: false,
-            segments: [
-              {
-                label: 'Home',
-                target: 'home',
-                active: true
-              },
-              {
-                label: 'Home2',
-                target: 'home'
-              }
-            ]
+            next: false
           }),
           tab: new app.Bars.Tab([
             {
@@ -48,7 +36,6 @@ function(ns) {
           content: new module.Views.TransitionDone(),
           title: new app.Bars.Title({
             title: 'Slide',
-            back: 'back',
             next: false
           })
         },
@@ -65,7 +52,6 @@ function(ns) {
           content: new module.Views.TransitionDone(),
           title: new app.Bars.Title({
             title: 'Fade',
-            back: 'back',
             next: false
           })
         },
@@ -112,10 +98,10 @@ function(ns) {
   var Router = ns.Router.extend({
     appRoutes: {
       'transitions': 'transitions',
-      'transition-slide': 'transition-slide',
-      'transition-fade': 'transition-fade',
-      'transition-stack': 'transition-stack',
-      'transition-noeffect': 'transition-noeffect'
+      'transitions/transition-slide': 'transition-slide',
+      'transitions/transition-fade': 'transition-fade',
+      'transitions/transition-stack': 'transition-stack',
+      'transitions/transition-noeffect': 'transition-noeffect'
     },
     
     controller: module.controller
@@ -127,10 +113,10 @@ function(ns) {
     template: 'demo/transitions',
 
     events: {
-      'click .transitionSlide': 'navToTransitionSlide',
-      'click .transitionFade': 'navToTransitionFade',
-      'click .transitionStack': 'navToTransitionStack',
-      'click .transitionNoEffect': 'navToTransitionNoEffect'
+      // 'click .transitionSlide': 'navToTransitionSlide',
+      // 'click .transitionFade': 'navToTransitionFade',
+      // 'click .transitionStack': 'navToTransitionStack',
+      // 'click .transitionNoEffect': 'navToTransitionNoEffect'
     },
 
     navToTransitionSlide: function(e) {
@@ -160,7 +146,7 @@ function(ns) {
 
   module.Views.TransitionDone = ns.ItemView.extend({
     tagName: 'div',
-    template: 'demo/transition-done',
+    template: 'demo/done',
 
     events: {
       'click .back': 'navPop'

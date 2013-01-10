@@ -12,6 +12,15 @@ function(ns) {
         tagName: 'div',
         template: 'bars/segment',
 
+        pushCSS: (function() {
+            var css = {};
+            css.display = app.vendorPrefixCSS + 'box';
+            css[app.vendorPrefixCSS + 'box-orient'] = 'horizontal';
+            css['box-sizing'] = 'border-box';
+            css[app.vendorPrefixCSS + 'box-flex'] = '1';
+            return css;
+        })(),
+
         initialize: function(options) {
             options = options || {};
             this.model = this.model || new ns.Model({
@@ -19,6 +28,16 @@ function(ns) {
                 back: options.back || 'back',
                 next: options.next || 'next'
             });
+
+            if (options.inHeader) {
+                this.options.back = false;
+                this.options.next = false;
+
+                var css = {};
+                css.width = '100%';
+                css['box-sizing'] = 'border-box';
+                this.pushCSS = css;
+            }
         },
 
         events: {

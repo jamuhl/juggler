@@ -35,7 +35,7 @@ function(_, Backbone, Marionette, StackNavigator) {
 
         show: function(transition) {
             if (transition) {
-                transition.play(null, this.$el, function() { this.$el.show(); }, this);
+                transition.play(null, this, function() { this.$el.show(); }, this);
             } else {
                 this.$el.show();
             }
@@ -45,7 +45,7 @@ function(_, Backbone, Marionette, StackNavigator) {
 
         hide: function(transition) {
             if (transition) {
-                transition.play(this.$el, null, function() { this.$el.hide(); }, this);
+                transition.play(this, null, function() { this.$el.hide(); }, this);
             } else {
                 this.$el.hide();
             }

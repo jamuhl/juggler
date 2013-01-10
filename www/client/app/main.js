@@ -23,8 +23,6 @@ function(ns, $, Backbone) {
   // Shorthand the application namespace
   var app = ns.app;
 
-  app.isMobile = navigator.userAgent.match(/(iPad|iPhone|Android)/);
-
   // turn on debugging
   app.debug = false;
 
@@ -35,11 +33,9 @@ function(ns, $, Backbone) {
     css: { position:'absolute', width: '100%' }
   });
 
-  app.stack.addStackRegion('title', '.bar-title', {
-    css: { display: 'box', 'box-orient': 'horizontal' }
-  });
-  app.stack.addStackRegion('header', '.bar-standard');
-  app.stack.addStackRegion('subheader', '.bar-standard-secondary');
+  app.stack.addStackRegion('title', '.bar-title');
+  app.stack.addStackRegion('header', '.bar-header');
+  app.stack.addStackRegion('subheader', '.bar-header-secondary');
   app.stack.addStackRegion('tab', '.bar-tab');
 
   // initialize

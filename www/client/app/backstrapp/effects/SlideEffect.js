@@ -8,10 +8,12 @@ define(['./Effect'], function (Effect) {
 
         toViewTransitionProps:{duration:0.4, easing:'ease-out', delay:0},
 
-        play:function ($fromView, $toView, callback, context) {
+        play:function (fromView, toView, callback, context) {
 
             var timeout,
                 that = this,
+                $toView = toView && toView.$el,
+                $fromView = fromView && fromView.$el,
                 activeTransitions = 0,
                 transformParams,
                 transformProp = that.vendorPrefix == '' ? 'transform' :
@@ -52,7 +54,7 @@ define(['./Effect'], function (Effect) {
                 activeTransitions++;
 
                 $toView.one(that.transitionEndEvent, transitionEndHandler);
-
+var w = context.$el.width();
                 $toView.css('left', that.direction == 'left' ? context.$el.width() : -context.$el.width());
                 $toView.css(transitionProp, [transformProp, ' ',
                                              that.toViewTransitionProps.duration, 's ',
@@ -60,7 +62,7 @@ define(['./Effect'], function (Effect) {
                                              that.toViewTransitionProps.delay, 's'].join(''));
 
                 // Showing the view
-                $toView.css('visibility', 'visible');
+                $toView.css(toView.pushCSS || {'visibility': 'visible'});
             }
 
             if ($fromView || $toView) {

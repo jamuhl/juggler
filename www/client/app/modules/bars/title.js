@@ -36,7 +36,7 @@ function(ns) {
             if (this.options.next === false) this.$('.next').hide();
 
             this.$('.back').addClass(this.options.backClass || 'button-prev');
-            this.$('.next').addClass(this.options.nextClass || 'booton-next');
+            this.$('.next').addClass(this.options.nextClass || 'button-next');
         }
     });
 

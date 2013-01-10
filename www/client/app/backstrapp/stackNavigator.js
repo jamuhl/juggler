@@ -108,7 +108,7 @@ function(Backbone, SlideEffect) {
         appendView(toViewRef.instance, this);
 
         transition = transition || this.defaultPushTransition || (this.defaultPushTransition = new SlideEffect({direction:'left'}));
-        transition.play(fromViewRef ? fromViewRef.instance.$el : null, toViewRef.instance.$el,
+        transition.play(fromViewRef ? fromViewRef.instance : null, toViewRef.instance,
             function () { // Callback function
 
                 var remove = replaceHowMany > 0 ? this.viewsStack.splice(this.viewsStack.length - replaceHowMany, replaceHowMany)
@@ -167,7 +167,7 @@ function(Backbone, SlideEffect) {
         }
 
         transition = transition || this.defaultPopTransition || (this.defaultPopTransition = new SlideEffect({direction:'right'}));
-        transition.play(fromViewRef.instance.$el, toViewRef ? toViewRef.instance.$el : null,
+        transition.play(fromViewRef.instance, toViewRef ? toViewRef.instance : null,
             function () { // Callback function
 
                 // Popping views from a stack
