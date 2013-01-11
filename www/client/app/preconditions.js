@@ -1,5 +1,5 @@
 define([
-	'ratchet'
+  'ratchet'
 ],
 
 function() { return {}; });

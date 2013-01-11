@@ -127,38 +127,7 @@ function(ns) {
 
   module.Views.Main = ns.ItemView.extend({
     tagName: 'div',
-    template: 'demo/transitions',
-
-    events: {
-      // 'click .transitionSlide': 'navToTransitionSlide',
-      // 'click .transitionFade': 'navToTransitionFade',
-      // 'click .transitionStack': 'navToTransitionStack',
-      // 'click .transitionNoEffect': 'navToTransitionNoEffect'
-    },
-
-    navToTransitionSlide: function(e) {
-      e.preventDefault();
-
-      module.controller.navigate('transition-slide');
-    },
-
-    navToTransitionFade: function(e) {
-      e.preventDefault();
-
-      module.controller.navigate('transition-fade');
-    },
-
-    navToTransitionStack: function(e) {
-      e.preventDefault();
-
-      module.controller.navigate('transition-stack');
-    },
-
-    navToTransitionNoEffect: function(e) {
-      e.preventDefault();
-
-      module.controller.navigate('transition-noeffect');
-    }
+    template: 'demo/transitions'
   });
 
   module.Views.TransitionDone = ns.ItemView.extend({

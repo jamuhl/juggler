@@ -1,63 +1,41 @@
 define([
-	'underscore',
-	'backbone',
-    './backstrappMarionette',
-    './baseCollection',
-    './baseModel',
-    './baseController',
-    './baseRouter',
-    './stackRegion',
-    './stackManager',
-    './appSettings',
-    './qs',
-    './effects/Effect'
+  'underscore',
+  'backbone',
+  './backstrappMarionette',
+  './baseCollection',
+  './baseModel',
+  './baseController',
+  './baseRouter',
+  './stackRegion',
+  './stackManager',
+  './appSettings',
+  './effects/Effect'
 ],
 
 function(_, Backbone, BackstrappMarionette, 
-    BaseCollection, BaseModel, BaseController, BaseRouter, 
-    stackRegion, stackManager, appSettings, qs, effect) {
+  BaseCollection, BaseModel, BaseController, BaseRouter, 
+  stackRegion, stackManager, appSettings, effect) {
 
-	// override Backbone sync
-	Backbone.sync = function(method, model, options) {
-        var type = methodMap[method];
+  // bootstrap namespace
+  var ns = BackstrappMarionette;
 
-        // __only change is here__ only allow get!
-        if (type !== 'GET') {
-            return options.success();
-        } else {
-            origSync(method, model, options);
-        }
-    };
+  // init stackManager and app settings
+  stackManager.init(ns);
+  appSettings.init(ns);
 
-    // Mappings from backbone to server methode.
-    var methodMap = {
-     'create': 'POST',
-     'update': 'PUT',
-     'delete': 'DELETE',
-     'read': 'GET'
-    };
+  // shortcut most important objects
+  ns.Collection = BaseCollection;
+  ns.Model = BaseModel;
+  ns.Controller = BaseController;
+  ns.Router = BaseRouter;
+  ns.StackRegion = stackRegion;
 
+  // extend effect with a logging function
+  effect.prototype.log = function(lvl, msg, obj) {
+    if (ns.app.debug !== true) return;
 
-    // bootstrap namespace
-	var ns = _.extend({}, BackstrappMarionette);
+    if (ns.app.log(lvl, msg, obj));
+  };
 
-    // init stackManager
-    stackManager.init(ns);
-    appSettings.init(ns);
-
-	ns.Collection = BaseCollection;
-	ns.Model = BaseModel;
-	ns.Controller = BaseController;
-	ns.Router = BaseRouter;
-    ns.StackRegion = stackRegion;
-	ns.qs = qs;
-
-    effect.prototype.log = function(lvl, msg, obj) {
-        if (ns.app.debug !== true) return;
-
-
-        if (ns.app.log(lvl, msg, obj));
-    };
-
-	return ns;
+  return ns;
 });

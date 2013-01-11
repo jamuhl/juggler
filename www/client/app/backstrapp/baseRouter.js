@@ -1,15 +1,15 @@
 define([
-    'underscore',  
-    'backbone',
-    'marionette'
+  'underscore',  
+  'backbone',
+  'marionette'
 ],
 
 function(_, Backbone, Marionette) {
 
-    var Router = Backbone.Marionette.AppRouter.extend({
-        
-    });
+  var Router = Backbone.Marionette.AppRouter.extend({
+    
+  });
 
-    return Router;
+  return Router;
 
 });

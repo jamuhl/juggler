@@ -1,46 +1,46 @@
 define([
-    'namespace'
+  'namespace'
 ],
 
 function(ns) {
-	var app = ns.app;
+  var app = ns.app;
 
-    // Create a new module
-    var module = ns.module();
+  // Create a new module
+  var module = ns.module();
 
-    module.Views.Title = ns.ItemView.extend({
-        tagName: 'div',
-        template: 'bars/title',
+  module.Views.Title = ns.ItemView.extend({
+    tagName: 'div',
+    template: 'bars/title',
 
-        allowAutoStackPositioning: true,
+    allowAutoStackPositioning: true,
 
-        initialize: function(options) {
-            options = options || {};
-            this.model = this.model || new ns.Model({
-                title: options.title,
-                back: options.back || 'back',
-                next: options.next || 'next'
-            });
-        },
+    initialize: function(options) {
+      options = options || {};
+      this.model = this.model || new ns.Model({
+        title: options.title,
+        back: options.back || 'back',
+        next: options.next || 'next'
+      });
+    },
 
-        events: {
-            'click .back': 'ui_back'
-        },
+    events: {
+      'click .back': 'ui_back'
+    },
 
-        ui_back: function(e) {
-            e.preventDefault();
+    ui_back: function(e) {
+      e.preventDefault();
 
-            app.pop(this.options.backEffects);
-        },
+      app.pop(this.options.backEffects);
+    },
 
-        onRender: function() {
-            if (this.options.back === false) this.$('.back').hide();
-            if (this.options.next === false) this.$('.next').hide();
+    onRender: function() {
+      if (this.options.back === false) this.$('.back').hide();
+      if (this.options.next === false) this.$('.next').hide();
 
-            this.$('.back').addClass(this.options.backClass || 'button-prev');
-            this.$('.next').addClass(this.options.nextClass || 'button-next');
-        }
-    });
+      this.$('.back').addClass(this.options.backClass || 'button-prev');
+      this.$('.next').addClass(this.options.nextClass || 'button-next');
+    }
+  });
 
-    return module;
+  return module;
 });
