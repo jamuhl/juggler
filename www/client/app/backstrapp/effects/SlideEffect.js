@@ -32,13 +32,10 @@ define(['./Effect'], function (Effect) {
                     $target.css(transitionProp, '');
 
                     if ($toView && $toView[0] == event.target) {
-                        $toView.css('left', 0);
-                        if (that.addedPositionCSS) {
-                            $toView.css('position', '');
-                            $toView.css('width', '');
-                            $toView.removeClass('stackPositioned');
-                            that.addedPositionCSS = false;
-                        }
+                        that.removePositionCSS(toView);
+                    }
+                    if ($fromView && $fromView[0] == event.target) {
+                        that.removePositionCSS(fromView);
                     }
 
                     if (activeTransitions == 0 && callback) {
@@ -58,6 +55,13 @@ define(['./Effect'], function (Effect) {
                                                that.fromViewTransitionProps.duration, 's ',
                                                that.fromViewTransitionProps.easing, ' ',
                                                that.fromViewTransitionProps.delay, 's'].join(''));
+
+                fromView.popCSS = fromView.popCSS || {};
+                if (fromView.allowAutoStackPositioning && !fromView.popCSS.position && !fromView.popCSS.width) {
+                    that.addPositionCSS(fromView);
+                }
+                $fromView.css(fromView.popCSS);
+                context.$el.css('width'); // reflow
             }
 
             if ($toView) {
@@ -73,9 +77,7 @@ define(['./Effect'], function (Effect) {
                 
                 toView.pushCSS = toView.pushCSS || {};
                 if (toView.allowAutoStackPositioning && !toView.pushCSS.position && !toView.pushCSS.width) {
-                    that.addedPositionCSS = true;
-                    $toView.css({position: 'relative', width: '100%'});
-                    $toView.addClass('stackPositioned');
+                    that.addPositionCSS(toView);
                 }
                 $toView.css(toView.pushCSS);
                 context.$el.css('width'); // reflow
@@ -106,18 +108,14 @@ define(['./Effect'], function (Effect) {
                         $toView.css(transitionProp, '');
                         $toView.css(transformProp, '');
                         $toView.css('left', 0);
-                        if (that.addedPositionCSS) {
-                            $toView.css('position', '');
-                            $toView.css('width', '');
-                            $toView.removeClass('stackPositioned');
-                            that.addedPositionCSS = false;
-                        }
+                        that.removePositionCSS(toView);
                     }
 
                     if ($fromView) {
                         $fromView.off(that.transitionEndEvent, transitionEndHandler);
                         $fromView.css(transitionProp, '');
                         $fromView.css(transformProp, '');
+                        that.removePositionCSS(fromView);
                     }
 
                     callback.call(context);

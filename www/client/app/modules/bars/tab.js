@@ -13,8 +13,6 @@ function(ns) {
     template: 'bars/tabItem',
     className: 'tab-item',
 
-    allowAutoStackPositioning: true,
-
     initialize: function(options) {
     },
 
@@ -45,6 +43,8 @@ function(ns) {
     className: 'tab-inner',
     itemView: module.Views.TabItem,
     pushCSS: { display: '', 'box-sizing': 'border-box' },
+
+    allowAutoStackPositioning: true,
 
     initialize: function(options) {
       options = options || {};

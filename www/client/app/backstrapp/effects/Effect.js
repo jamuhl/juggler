@@ -16,6 +16,25 @@ define(['./vendorPrefix'], function (vendorPrefix) {
     var ctor = function () {
     };
 
+    Effect.prototype = {
+        removePositionCSS: function(view) {
+            var $view = view.$el;
+            $view.css('left', 0);
+            if (view.addedPositionCSS) {
+                $view.css('position', '');
+                $view.css('width', '');
+                $view.removeClass('stackPositioned');
+                delete view.addedPositionCSS;
+            }
+        },
+        addPositionCSS: function(view) {
+            var $view = view.$el;
+            $view.css({position: view.stackPosition || 'inherit', width: '100%'});
+            $view.addClass('stackPositioned');
+            view.addedPositionCSS = true;
+        }
+    };
+
     Effect.extend = function (protoProps, staticProps) {
         var child = function () {
             Effect.apply(this, arguments);
