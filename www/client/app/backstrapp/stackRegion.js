@@ -12,7 +12,9 @@ function(_, Backbone, Marionette, StackNavigator) {
     initialize: function(options) {
       this.stackNavigator = new StackNavigator({
         el: this.el,
-        css: options.css || {}
+        css: options.css || {},
+        popTransition: options.popTransition,
+        pushTransition: options.pushTransition
       });
 
       this.name = options.name;
