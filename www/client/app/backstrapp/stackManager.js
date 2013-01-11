@@ -61,9 +61,11 @@ function(Backbone, _, effects) {
         , toPop = this.viewStack[this.viewStack.length -1]
         , toShow = this.viewStack[this.viewStack.length -2] || { views: {} };
 
-      // if (this.viewStack.length === 1) {
-      //   Backbone.history.navigate('#', { trigger: true });
-      // }
+      // if we have no target to show go back to root
+      if (this.viewStack.length === 1) {
+        Backbone.history.navigate('', { trigger: true });
+        return;
+      }
 
       container = container || {};
       _.defaults(container, this.viewStack.pop());

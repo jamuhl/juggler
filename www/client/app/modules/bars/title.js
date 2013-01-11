@@ -24,13 +24,34 @@ function(ns) {
     },
 
     events: {
-      'click .back': 'ui_back'
+      'click .back': 'ui_back',
+      'click .next': 'ui_next'
+    },
+
+    ui_next: function(e) {
+      e.preventDefault();
+
+      var target = this.options.nextTarget;
+
+      if (typeof target === 'string') {
+        app.navigate(target, { trigger: true });
+      } else if (typeof target === 'function') {
+        target(this);
+      }
     },
 
     ui_back: function(e) {
       e.preventDefault();
 
-      app.pop(this.options.backEffects);
+      var target = this.options.backTarget;
+
+      if (typeof target === 'string') {
+        app.navigate(target, { trigger: true });
+      } else if (typeof target === 'function') {
+        target(this);
+      } else {
+        app.pop(this.options.backEffects);
+      }
     },
 
     onRender: function() {

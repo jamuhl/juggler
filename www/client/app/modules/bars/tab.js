@@ -25,7 +25,13 @@ function(ns) {
     ui_target: function(e) {
       e.preventDefault();
 
-      app.navigate(this.model.get('target'), { trigger: true });
+      var target = this.model.get('target');
+
+      if (typeof target === 'string') {
+        app.navigate(target, { trigger: true });
+      } else if (typeof target === 'function') {
+        target(this);
+      }
     },
 
     onRender: function() {
