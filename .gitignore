@@ -19,8 +19,8 @@ boiler/**/*
 
 
 # exclude projects
-android
-android/**/*
+/android
+/android/**/*
 
-iOS
-iOS/**/*
+/iOS
+/iOS/**/*

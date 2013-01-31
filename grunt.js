@@ -5,7 +5,7 @@
 module.exports = function(grunt) {
 
   // Needed vars to start
-  var phonegapLib = '/Development/phonegap_2.2.0/lib'
+  var phonegapLib = '/Development/phonegap-2.3.0/lib'
     , reverseDomain = 'com.example'
     , projectName = 'boilerplate';
 
@@ -50,10 +50,13 @@ module.exports = function(grunt) {
     /* phonegap cli bridge - iOS */
     iOS: {
       emulate: {
-        bin: 'emulate' /* brew install ios-sim */
+        bin: 'run' /* brew install ios-sim */
       },
       debug: {
-        bin: 'debug'
+        bin: 'build'
+      },
+      release: {
+        bin: 'release'
       },
       log: {
         bin: 'log'
@@ -63,19 +66,19 @@ module.exports = function(grunt) {
     /* phonegap cli bridge - Android */
     android: {
       emulate: {
-        bin: 'emulate'
+        bin: 'run'
       },
       debug: {
-        bin: 'debug'
+        bin: 'build'
+      },
+      release: {
+        bin: 'release'
       },
       log: {
         bin: 'log'
       },
       clean: {
         bin: 'clean'
-      },
-      BOOM: {
-        bin: 'BOOM'
       }
     },
 
@@ -109,7 +112,7 @@ module.exports = function(grunt) {
           "boiler/dist/": [
             "boiler/src/assets/img/**/*",
             "boiler/src/assets/font/**/*",
-            "boiler/src/assets/js/libs/cordova-2.2.0.js"
+            "boiler/src/assets/js/libs/cordova-2.3.0.js"
         ]}
       },
       genToDist: {
