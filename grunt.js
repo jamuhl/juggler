@@ -42,6 +42,10 @@ module.exports = function(grunt) {
         execOptions: {
             cwd: phonegapLib
         }
+      },
+      copyToAndroidSim: {
+        command: 'adb install -r ' + path.normalize('android/bin/boilerplate-debug.apk'),
+        stdout: true
       }
     },
 
@@ -297,6 +301,7 @@ module.exports = function(grunt) {
   grunt.registerTask('android:dist', 'android:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
   grunt.registerTask('android:build', 'android:clean clean:android android:dist copy:distToAndroid android:debug');
   grunt.registerTask('android:watch', 'watch:android');
+  grunt.registerTask('android:copyToSim', 'shell:copyToAndroidSim');
  
   grunt.registerTask('build', 'iOS:build android:build');
 
