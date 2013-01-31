@@ -1,3 +1,5 @@
+var path = require('path');
+
 // This is the main application configuration file.  It is a Grunt
 // configuration file, which you can learn more about here:
 // https://github.com/cowboy/grunt/blob/master/docs/configuring.md
@@ -5,7 +7,7 @@
 module.exports = function(grunt) {
 
   // Needed vars to start
-  var phonegapLib = '/Development/phonegap-2.3.0/lib'
+  var phonegapLib = path.normalize('/Development/phonegap-2.3.0/lib')
     , reverseDomain = 'com.example'
     , projectName = 'boilerplate';
 
@@ -26,14 +28,14 @@ module.exports = function(grunt) {
     shell: {
       /* create phonegap projects */
       createIOS: {
-        command: './ios/bin/create <%= meta.location %>/ios/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
+        command: path.normalize('./ios/bin/create') + ' <%= meta.location %>/ios/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
         stdout: true,
         execOptions: {
             cwd: phonegapLib
         }
       },
       createAndroid: {
-        command: './android/bin/create <%= meta.location %>/android/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
+        command: path.normalize('./android/bin/create') + ' <%= meta.location %>/android/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
         stdout: true,
         execOptions: {
             cwd: phonegapLib
