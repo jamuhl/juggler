@@ -20,7 +20,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     meta: {
-      location: __dirname,
+      location: path.normalize(__dirname),
+      locationIOS: path.normalize(path.join(__dirname, 'ios')),
+      locationAndroid: path.normalize(path.join(__dirname, 'android')),
       reverseDomain: reverseDomain,
       projectName: projectName
     },
@@ -28,14 +30,14 @@ module.exports = function(grunt) {
     shell: {
       /* create phonegap projects */
       createIOS: {
-        command: path.normalize('./ios/bin/create') + ' <%= meta.location %>/ios/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
+        command: path.normalize('./ios/bin/create') + ' <%= meta.locationIOS %> <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
         stdout: true,
         execOptions: {
             cwd: phonegapLib
         }
       },
       createAndroid: {
-        command: path.normalize('./android/bin/create') + ' <%= meta.location %>/android/ <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
+        command: path.normalize('./android/bin/create') + ' <%= meta.locationAndroid %> <%= meta.reverseDomain %>.<%= meta.projectName %> <%= meta.projectName %>',
         stdout: true,
         execOptions: {
             cwd: phonegapLib
