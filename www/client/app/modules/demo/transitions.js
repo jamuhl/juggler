@@ -37,9 +37,9 @@ function(ns) {
           title: new app.Bars.Title({
             title: 'Slide',
             next: false
-          })
-        },
-        tab: 'keep'
+          }),
+          tab: 'keep'
+        }
       });
     },
     'transition-slide-reverse': function() {
@@ -53,9 +53,9 @@ function(ns) {
           title: new app.Bars.Title({
             title: 'Slide-reverse',
             next: false
-          })
-        },
-        tab: 'keep'
+          }),
+          tab: 'keep'
+        }
       });
     },
     'transition-fade': function() {
@@ -69,9 +69,9 @@ function(ns) {
           title: new app.Bars.Title({
             title: 'Fade',
             next: false
-          })
-        },
-        tab: 'keep'
+          }),
+          tab: 'keep'
+        }
       });
     },
     'transition-stack': function() {
@@ -86,9 +86,9 @@ function(ns) {
             title: 'Stack',
             back: 'back',
             next: false
-          })
-        },
-        tab: 'keep'
+          }),
+          tab: 'keep'
+        }
       });
     },
     'transition-noeffect': function() {
@@ -103,9 +103,9 @@ function(ns) {
             title: 'NoEffect',
             back: 'back',
             next: false
-          })
-        },
-        tab: 'keep'
+          }),
+          tab: 'keep'
+        }
       });
     }
   });

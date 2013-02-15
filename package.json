@@ -19,7 +19,7 @@
       "grunt": "*"
     , "grunt-contrib": ">=0.1.0"
     , "grunt-contrib-jade": "https://github.com/Dignifiedquire/grunt-contrib-jade/tarball/multiple"
-    , "grunt-shell": ">=0.1.0"
+    , "grunt-shell": "=0.1.4"
     , "grunt-rigger": ">=0.1.0"
     , "express": ">= 0.0.1"
     , "zipstream": ">=0.2.1"

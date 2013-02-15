@@ -5,19 +5,13 @@ define([
 function(ns) {
   var app = ns.app;
 
-  // Create a new module
-  var module = ns.module({ name: 'demo', append: false });
+  var module = ns.module();
 
   var Controller = ns.Controller.extend({
     home: function() {
       app.push({
         views: {
-          content: new module.Views.Main()//,
-          // title: new app.Bars.Title({
-          //   title: 'Welcome to Juggler',
-          //   back: false,
-          //   next: false
-          // })
+          content: new module.Views.Main()
         }
       });
     }

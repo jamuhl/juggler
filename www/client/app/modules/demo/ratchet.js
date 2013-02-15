@@ -6,7 +6,7 @@ function(ns) {
   var app = ns.app;
 
   // Create a new module
-  var module = ns.module({ name: 'demo', append: false });
+  var module = ns.module();
 
   var Controller = ns.Controller.extend({
     ratchet: function() {
