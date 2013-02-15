@@ -8,6 +8,7 @@ require.config({
     libs: '../assets/js/libs',
 
     // Libraries
+    /*shimClassList: '../assets/js/libs/shim_classList',*/ // uncomment if running on non html5 browser aka android 2.x
 
     jquery: '../assets/js/libs/zepto-1.0rc1',
     jquery_noclickdelay: "../assets/js/libs/jquery-noclickdelay",
@@ -23,6 +24,10 @@ require.config({
   },
 
   shim: {
+    /*shimClassList: {
+      deps: []
+    },*/ // uncomment if running on non html5 browser aka android 2.x
+
     jquery: {
       deps: [],
       exports: '$'
