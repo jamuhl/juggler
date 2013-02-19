@@ -18,6 +18,7 @@
   , "devDependencies": {
       "grunt": "*"
     , "grunt-contrib": ">=0.1.0"
+    , "grunt-juggler": ">=0.1.0"
     , "grunt-contrib-jade": "https://github.com/Dignifiedquire/grunt-contrib-jade/tarball/multiple"
     , "grunt-shell": ">=0.1.4"
     , "express": ">= 0.0.1"

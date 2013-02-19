@@ -13,9 +13,10 @@ module.exports = function(grunt) {
 
   // import tasks
   grunt.loadNpmTasks('grunt-contrib');
+  grunt.loadNpmTasks('grunt-juggler');
   //grunt.loadNpmTasks('grunt-contrib-jade'); /* as long default jade won't allow wildcard for target files */
   //grunt.loadNpmTasks('grunt-shell');
-  grunt.loadTasks('tasks');
+  //grunt.loadTasks('tasks');
 
   grunt.initConfig({
 
