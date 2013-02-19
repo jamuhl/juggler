@@ -23,7 +23,7 @@ function($, _, Handlebars) {
       // Should be an instant synchronous way of getting the template, if it
       // exists in the JST object.
       if (JST[path]) {
-        return Handlebars.template(JST[path]);
+        return JST[path];
         // if (_.isFunction(done)) {
         //     return tmpl;
         // }

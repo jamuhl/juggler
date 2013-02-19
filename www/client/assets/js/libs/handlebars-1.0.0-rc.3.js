@@ -2198,6 +2198,3 @@ Handlebars.VM = {
 };
 
 Handlebars.template = Handlebars.VM.template;
-;
-Window size: x 
-Viewport size: x

@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     // },
 
     clean: {
-      boiler: { cwd: 'boiler/', src: ['**'] },
+      boiler: { options: { force: true }, src: ['boiler/'] },
       iOS: ['ios/www/'],                  /* clean iOS webroot */
       android: ['android/assets/www/' ]   /* clean android webroot */
     },
@@ -151,17 +151,15 @@ module.exports = function(grunt) {
 
       /* release iOS */
       distToIOS: {
-        options: { basePath: 'boiler/dist' },
-        files: {
-          'ios/www/': ['boiler/dist/**/*']
-        }
+        files: [
+          { expand: true, cwd: 'boiler/dist/', src: ['**'], dest: 'ios/www/' }
+        ]
       },
       /* release Android*/
       distToAndroid: {
-        options: { basePath: 'boiler/dist' },
-        files: {
-          'android/assets/www/': ['boiler/dist/**/*']
-        }
+        files: [
+          { expand: true, cwd: 'boiler/dist/', src: ['**'], dest: 'android/assets/www/' }
+        ]
       }
     },
 
@@ -307,12 +305,12 @@ module.exports = function(grunt) {
   grunt.registerTask('iOS:watch', ['watch:iOS']);
 
   //grunt.registerTask('android:create', 'shell:createAndroid');
-  grunt.registerTask('android:boil', 'clean:boiler copy:boilClient copy:boilAndroid stylus jade');
-  grunt.registerTask('android:dist', 'android:boil handlebars requirejs concat mincss copy:srcToDist copy:genToDist');
-  grunt.registerTask('android:build', 'android:clean clean:android android:dist copy:distToAndroid android:debug');
-  grunt.registerTask('android:watch', 'watch:android');
+  grunt.registerTask('android:boil', ['clean:boiler', 'copy:boilClient', 'copy:boilAndroid', 'stylus', 'jade']);
+  grunt.registerTask('android:dist', ['android:boil', 'handlebars', 'requirejs', 'concat', 'cssmin', 'copy:srcToDist', 'copy:genToDist']);
+  grunt.registerTask('android:build', ['android:clean', 'clean:android', 'android:dist', 'copy:distToAndroid', 'android:debug']);
+  grunt.registerTask('android:watch', ['watch:android']);
   //grunt.registerTask('android:copyToSim', 'shell:copyToAndroidSim');
  
-  grunt.registerTask('build', 'iOS:build android:build');
+  grunt.registerTask('build', ['iOS:build', 'android:build']);
 
 };
