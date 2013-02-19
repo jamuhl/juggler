@@ -15,7 +15,7 @@ require.config({
     standalone_deferred: '../assets/js/libs/standalone.deferred',
 
     underscore: '../assets/js/libs/lodash-0.3.2', // drop in replacement
-    handlebars: "../assets/js/libs/handlebars-1.0.0.beta.6",
+    handlebars: "../assets/js/libs/handlebars-1.0.0-rc.3",
 
     backbone: "../assets/js/libs/backbone-0.9.2",
     marionette: "../assets/js/libs/backbone.marionette-1.0.0rc2",
