@@ -13,59 +13,81 @@ html(lang="en")
         h2 Getting started:
 
       .row-fluid 
-          .span4
-            h4.feature-title Install juggler's command line tool:
-          .span8
-            .feature
-              pre
-                code
-                  |npm install -g juggl
-        .row-fluid 
-          .span4
-            h4.feature-title Create a new project:
-          .span8
-            .feature
-              pre
-                code
-                  |mkdir myapp
-                  |cd myapp
-                  |// init juggler project template
-                  |juggl init:juggler
-                  |// -> for now you will need to set path and projectname in grunt.js file
-        
-        .row-fluid 
-          .span4
-            h4.feature-title Add a device:
-          .span8
-            .feature
-              pre
-                code
-                  |// create iOS phonegap application
-                  |juggl iOS:create
-                  |// build webapp
-                  |juggl iOS:build
-                  |// start iOS emulator (brew install ios-sim -- to use sim from commandline)
-                  |juggl iOS:emulate
-        
-        .row-fluid 
-          .span4
-            h4.feature-title Test / Debug App in Browser:
-          .span8
-            .feature
-              pre
-                code
-                  |// build debug app
-                  |juggl iOS:boil
-                  |// start built in server
-                  |juggl server
-                  |// -> head your browser to localhost:8000
+        .span4
+          h4.feature-title Install grunt / grunt-init:
+        .span8
+          .feature
+            p juggler depends on 
+              a(href='http://gruntjs.com/', target='_blank') grunt.js
+              |  as task runner and 
+              a(href='http://gruntjs.com/project-scaffolding', target='_blank') grunt-init
+              |  for template scaffolding:
+            pre
+              code
+                |npm install -g grunt
+                |npm install -g gruntgrunt-init
 
-              .alert.alert-info.feature-description
-                p 
-                  | You might want to try the 
-                  a(url='https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc', target="_blank") Ripple Emulator
-                  |  for better testing in chrome browser.
+      .row-fluid 
+        .span4
+          h4.feature-title Add template to grunt-init:
+        .span8
+          .feature
+            pre
+              code
+                |git clone git://github.com/jamuhl/juggler-init-demo.git ~/.grunt-init/juggler-demo
+
+            p Right now we provide only the demo template - other templates will follow.
+
+      .row-fluid 
+        .span4
+          h4.feature-title Create a new project:
+        .span8
+          .feature
+            pre
+              code
+                |mkdir myapp
+                |cd myapp
+                |// init juggler project template
+                |grunt-init juggler-demo
+                |// -> for now you will need to set path and projectname in Gruntfile.js file
+      
+      .row-fluid 
+        .span4
+          h4.feature-title Add a device:
+        .span8
+          .feature
+            pre
+              code
+                |// create iOS phonegap application
+                |grunt iOS:create
+                |// build webapp
+                |grunt iOS:build
+                |// start iOS emulator (brew install ios-sim -- to use sim from commandline)
+                |grunt iOS:emulate
+
+            p To develop for Android just use same commands for android, eg: 
+              code grunt android:create
+      
+      .row-fluid 
+        .span4
+          h4.feature-title Test / Debug App in Browser:
+        .span8
+          .feature
+            pre
+              code
+                |// build debug app
+                |grunt iOS:boil
+                |// start built in server
+                |grunt server
+                |// -> head your browser to localhost:8000
+
+            .alert.alert-info.feature-description
+              p 
+                | You might want to try the 
+                a(url='https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc', target="_blank") Ripple Emulator
+                |  for better testing device functionality in chrome browser.
                 
+
     include ../includes/layout/extra
       
     include ../includes/layout/footer
