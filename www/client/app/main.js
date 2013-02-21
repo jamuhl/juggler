@@ -5,6 +5,8 @@ require([
   "jquery",
   "backbone",
 
+  "./settings",
+
   // Modules
   //"modules/data/appData",
   //"modules/translate/resourceSync",
@@ -18,13 +20,13 @@ require([
   "modules/demo/views"
 ],
 
-function(ns, $, Backbone) {
+function(ns, $, Backbone, settings) {
 
   // Shorthand the application namespace
   var app = ns.app;
 
-  // turn on debugging
-  app.debug = false;
+  // init settings
+  settings.init(ns);
 
   // regions
   // you could add regions like this app.addRegions({});
@@ -40,7 +42,7 @@ function(ns, $, Backbone) {
 
   // initialize
   app.addAsyncInitializer(function(options, done) {
-    if (app.isAndroid || (app.isIOS && app.isUIWebView)) {
+    if (app.isPhoneGap) {
       // This is running on a device so waiting for deviceready event
       document.addEventListener('deviceready', done);
     } else {
