@@ -1,6 +1,6 @@
 # Visit the project website:
 
-[jugglerjs.com](http://jugglerjs.com)
+[http://jamuhl.github.io/juggler](http://jamuhl.github.io/juggler)
 
 # What you get:
 
